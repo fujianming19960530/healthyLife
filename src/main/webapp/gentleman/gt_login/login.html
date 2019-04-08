@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>login</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="public/layui/css/layui.css">
+</head>
+<body class="body">
+	<div class="home">
+		<div class="login">
+			<div class="middle">
+			<div class="title">
+				<a href="javascript:void(0)" class="login_way_left">
+					<p class="login_font">
+						账户登录
+					</p>
+				</a>
+				<a href="javascript:void(0)" class="login_way_right">
+					<p class="login_font">
+						扫码登录
+					</p>
+				</a>
+			</div>
+			<div class="login_middle">
+				<div class="login_info">
+					<input class="number" type="text" name="" id="number" placeholder="登录账号"><br>
+					<input class="number" type="password" name="" id="password" placeholder="登录密码"><br>
+				</div>
+				<a href="javascript:void(0)" class="layui-btn login_sub_a" id="login">
+						<span data-method="confirmTrans">登陆</span>
+				</a>
+				<div class="register">
+					没有账号？去<a href="javascript:void(0)">注册</a>.</br>
+					或者<a href="javascript:void(0)" id="visiter">当游客</a>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+
+	<!-- 引用公用的js -->
+	<script type="text/javascript" src="public/js/jquery.js"></script>
+	<script type="text/javascript" src="public/js/jquery.base64.js"></script>
+	<script type="text/javascript" src="public/layui/layui.js"></script>
+	<script type="text/javascript" src="public/js/invoker.js"></script>
+	<script type="text/javascript" src="public/js/utils.js"></script>
+	<!--<script type="text/javascript" src="public/js/Util_Invoker.js"></script>-->
+	<!-- 引用本页面的js -->
+	<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>

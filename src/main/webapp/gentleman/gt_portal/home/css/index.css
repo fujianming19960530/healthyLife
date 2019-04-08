@@ -1,0 +1,282 @@
+html {
+	height: 100%;
+	width:100%;
+	/*解决窗口抖动问题*/
+	/*overflow-y: scroll;
+	overflow:auto;*/
+	margin: 0;
+}
+.body{
+	height: 100%;
+	width:100%;
+	text-align:center;
+	/*background:url(../picture/677410.png)center no-repeat;
+	background-size: cover;*/
+	/*解决窗口抖动问题*/
+	overflow:auto;
+	margin: 0;
+	}
+.backgroud_pic{
+	margin-top: 0px;
+	width:100%;
+	height: 100%;
+	background:url(../picture/bg.jpg)center no-repeat;
+	background-size: cover;
+	/*固定图片不移动*/
+	background-attachment:fixed;
+	overflow:auto;
+	position: absolute;
+	z-index:10;
+	/**模糊效果*/
+	/*filter: blur(1px);
+	-webkit-filter: blur(1px);  !* chrome, opera *!
+	-ms-filter: blur(1px);
+	-moz-filter: blur(1px);*/
+}
+#home{
+	height: 100%;
+	width:100%;
+	position: absolute;
+	z-index:100;
+	overflow:auto;
+	margin: 0;
+}
+.head{
+	width: 100%;
+	height: 220px;
+	/*background: grey;
+	opacity: 0.4;*/
+}
+.head_top{
+	width: 100%;
+	height: 15%;
+	background:	#B0C4DE;
+	opacity: 0.9;
+	/*opacity: 0.4;*/
+}
+.head_middle{
+	/*background: #00F7DE;*/
+	width: 100%;
+	height: 85%;
+}
+.middle_logo{
+	float: left;
+	width: 25%;
+	height: 80%;
+	margin-left: 6%;
+	margin-top: 10px;
+	background:url(../picture/logo_1.png)center no-repeat;
+	background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	/*overflow:auto;*/
+}
+.user_info{
+	float: right;
+	width: 30%;
+	height: 80%;
+	margin-right: 35px;
+	margin-top: 15px;
+	background: #ADD8E6;
+	-webkit-border-radius:15px;
+	/*opacity:0.4;*/
+	background:rgba(255,255,255,0.4)
+}
+.user_avater{
+	float: left;
+	width: 120px;
+	height: 120px;
+	/*margin-right: 35px;*/
+	margin-left: 20px;
+	margin-top: 12px;
+	background: #0F2543;
+	display: block;
+	-webkit-border-radius: 50%;
+	background:url(../picture/lbxx.jpg)center no-repeat;
+	background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	border:5px solid rgba(0,0,0,0.4);
+}
+.title{
+	font-size: 1em;
+	width: 100%;
+	height: 70px;
+	background-color: white;
+	opacity: 0.85;
+	display: block;
+	z-index:100;
+}
+.menu{
+	float: left;
+	width: 60%;
+	height: 100%;
+}
+.login{
+	float: left;
+	width: 20%;
+	height: 100%;
+
+}
+.menu_home{
+	float: left;
+	height: 100%;
+	margin-left: 5%;
+	margin-top: 1%;
+}
+.a_menu{
+	margin-top: 10%;
+	display:block;
+}
+.search{
+	float: left;
+	height: 100%;
+	margin-left: 5%;
+	margin-top: 1%;
+	font-size: 15px
+}
+.p_about{
+	margin-top: 4%
+}
+.search_menu{
+	border-left:none;
+    border-right:none;
+  	border-top:none;
+  	border-bottom:1px solid #0F2543;
+  	opacity: 0.3;
+  	background-color: white;
+  	height: 45%;
+  	width: 70%;
+}
+.search_icon{
+}
+.content{
+	width: 100%;
+	/*height: 80%;*/
+	z-index:-100;
+	margin-top: 0;
+}
+.blocks{
+	width: 80%;
+	float: left;
+	/*height: 100%;*/
+}
+.newBlock{
+	width: 100%;
+	color: black;
+	display:block;
+}
+.line_title{
+	width: 100%;
+	font-size: 20px;
+	opacity: 0.6;
+}
+.p_address{
+	width: 50%;
+	margin-left: -10%;
+	margin-top: 1%;
+}
+.newyest_block{
+	margin-top: 1%;
+	width: 100%;
+	margin-left: 80px;
+}
+.blocks_new{
+	float: left;
+	margin-left: 50px;
+	height: 215px;
+	width: 200px;
+}
+.picture{
+	width: 140px;
+	height: 140px;
+	margin-top: 15px;
+	margin-left: 30px;
+	background:url(../picture/lol.jpg) center center no-repeat;
+	background-size: cover;
+	border-radius:9px;
+}
+.blocks_new_title{
+	font-size: 23px;
+	margin-top: 5px;
+	width: 100%;
+}
+.block_detail{
+	margin-top: 5px;
+	font-size: 12px;
+}
+.p_alltips{
+	margin-left: 30px;
+	float: left;
+}
+.p_looks{
+	margin-left: 20px;
+	float: left;
+}
+.allBlock{
+	width: 100%;
+}
+.messages{
+	float: left;
+	width: 20%;
+	height: 700px;
+}
+.foot{
+	float: left;
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.line_message{
+	width: 100%;
+	height: 40px;
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.detail_message{
+	width: 100%;
+	height: 660px;
+	float: left;
+}
+.message_lines{
+	width: 100%;
+	height: 400px;
+}
+.send_message{
+	width: 100%;
+	height: 260px;
+}
+.text_message{
+	border-radius:9px;
+	width: 90%;
+	height:75%;
+	resize:none;
+	opacity: 0.8;
+	font-size: 25px;
+}
+.a_submit{
+	float: left;
+	margin-left: 70%;
+	margin-top: 6%;
+}
+.client{
+	height: 70px;
+	width: 100%;
+	margin-top: 3px;
+}
+.avatar{
+	float: left;
+	height: 40px;
+	width: 40px;
+	background:url(../picture/demo.gif) center center no-repeat;
+	background-size: cover;
+	margin-left: 5px;
+	margin-top: 15px;
+	border-radius:16px;/*半径*/
+}
+.client_name{
+	margin-top: 5px;
+	float: left;
+	height: 100%;
+	width: 80%;
+	margin-left: 5px;
+}

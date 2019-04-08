@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>gentleman</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="/gentleman/public/layui/css/layui.css">
+	<style type="text/css">
+	.settitle {
+    position: fixed;
+    top: 0;
+	}</style>
+</head>
+<body class = "body">
+<div class="backgroud_pic"></div>
+	<div class="home" id="home">
+		<!-- 头部的div -->
+		 <div class="head">
+			 <div class="head_top">
+			 </div>
+			 <div class="head_middle">
+				<div class="middle_logo">
+				</div>
+				 <!--用户登录信息-->
+				 <div class="user_info">
+					 <a href="javascript:void(0)" class="user_avater" id="user_avater">
+					 </a>
+
+
+				 </div>
+			 </div>
+		</div>
+		<!-- 导航栏 -->
+		<div class="title">
+			<div style="width: 15%;height: 100%;float: left;"></div>
+			<!-- 导航 -->
+			<div class="menu">
+				<div class="menu_home">
+					<a href="javascript:void(0)" class="a_menu"><i class="layui-icon" style="font-size:25px;">&#xe68e;</i><p class="p_home">首页</p></a>
+				</div>
+				<div class="menu_home">
+					<a href="javascript:void(0)"><i class="layui-icon" style="font-size:25px;">&#xe609;</i><p class="p_about">关于我们</p></a>
+				</div>
+			</div>
+			<!-- 登录+搜索 -->
+			<div class="login">
+				<div class="menu_home">
+					<a href="javascript:void(0)" class="a_menu"><i class="layui-icon" style="font-size:30px;">&#xe66f;</i><p class="p_about">登陆</p></a>
+				</div>
+				<div class="search">
+					<input type="text" class="search_menu" placeholder="搜索帖子或作者">
+					<a href="javascript:void(0)" class="search_icon">
+						<i class="layui-icon" style="font-size:45px;color: #08091">&#xe615;</i></a>
+				</div>
+			</div>
+		</div>
+		<!-- 贴吧主要内容 -->
+		<div class="content">
+			<!-- 主要内容 -->
+			<div class="blocks">
+				<!-- 最新信息 -->
+				<div class="newBlock">
+					<div class="line_title">
+						<p class="p_address"><!-- |<i class="layui-icon" style="font-size:20px;">&#xe715;</i>位置 |<i class="layui-icon" style="font-size:20px;">&#xe68e;</i>首页 | --><i class="layui-icon" style="font-size:20px;">&#xe663;</i>最新板块 </p>
+					</div>
+					<div class="newyest_block"><a href="javascript:void(0)">
+						<div class="blocks_new">
+							<div class="blocks_new_picture">
+								<div class="picture"></div>
+							</div>
+							<div class="blocks_new_title">英雄联盟</div>
+							<div class="block_detail"><p class="p_alltips">帖子数:5698</p><p class="p_looks">查看:7895</p></div>
+						</div></a>
+					</div>
+					<div class="newyest_block"><a href="javascript:void(0)">
+						<div class="blocks_new">
+							<div class="blocks_new_picture">
+								<div class="picture"></div>
+							</div>
+							<div class="blocks_new_title">英雄联盟</div>
+							<div class="block_detail"><p class="p_alltips">帖子数:5698</p><p class="p_looks">查看:7895</p></div>
+						</div></a>
+					</div>
+					<div style="clear:both;"></div>
+				</div>
+				<div class="allBlock">
+					<div class="line_title">
+						<p class="p_address"><!-- |<i class="layui-icon" style="font-size:20px;">&#xe715;</i>位置 |<i class="layui-icon" style="font-size:20px;">&#xe68e;</i>首页 | --><i class="layui-icon" style="font-size:20px;">&#xe663;</i>全部板块 </p>
+					</div>
+					<div class="newyest_block"><a href="javascript:void(0)">
+						<div class="blocks_new">
+							<div class="blocks_new_picture">
+								<div class="picture"></div>
+							</div>
+							<div class="blocks_new_title">英雄联盟</div>
+							<div class="block_detail"><p class="p_alltips">帖子数:5698</p><p class="p_looks">查看:7895</p></div>
+						</div></a>
+					</div>
+					<div class="newyest_block"><a href="javascript:void(0)">
+						<div class="blocks_new">
+							<div class="blocks_new_picture">
+								<div class="picture"></div>
+							</div>
+							<div class="blocks_new_title">英雄联盟</div>
+							<div class="block_detail"><p class="p_alltips">帖子数:5698</p><p class="p_looks">查看:7895</p></div>
+						</div></a>
+					</div>
+					<div style="clear:both;"></div>
+				</div>
+			</div>
+			<!-- 留言信息 -->
+			<div class="messages">
+				<div class="line_message">
+					<p class="p_address"><i class="layui-icon" style="font-size:20px;">&#xe63a;</i>&nbsp;最新留言 </p>
+				</div>
+				<div class="detail_message">
+					<div class="message_lines">
+						<marquee class="noticeText" direction="up" behavior="scroll" scrollamount="50" scrolldelay="1000" loop="5" width="100%" style="width: 90%;height: 90%;">
+							<div class="client">
+								<div class="avatar"></div>
+								<div class="client_name"><p id="p_client_detail">拉钩上吊一百年不许变，拉钩上吊一百年不许变,拉钩上吊一百年不许变，拉钩上吊一拉钩上吊一拉拉钩上吊一百年不许变拉钩上吊一百年不许变拉钩上吊一百年不许变</p></div>
+							</div>
+						</marquee>
+						
+					</div>
+					<div class="send_message">
+						<textarea rows="5" cols="5" class="text_message" placeholder="输入你想说的话。。"></textarea>
+						<a href="javascript:void(0)" class="a_submit">提交</a>
+					</div>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+		<div class="foot">
+			<div class="copyright"><p>版权所有:中国中央电视台（中国驰名商标）copyright:www.CHINA.com。</p></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="/gentleman/public/js/jquery.js"></script>
+	<script type="text/javascript" src="/gentleman/public/js/invoker.js"></script>
+	<script type="text/javascript" src="/gentleman/public/layui/layui.js"></script>
+	<script type="text/javascript" src="/gentleman/public/js/utils.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
