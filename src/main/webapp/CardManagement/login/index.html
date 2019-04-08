@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>	
+<head>
+<title>Login</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- 引用css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- 引用公用的js -->
+	<script type="text/javascript" src="CardManagement/public/js/jquery.js"></script>
+	<script type="text/javascript" src="CardManagement/public/js/jquery.base64.js"></script>
+	<script type="text/javascript" src="CardManagement/public/layui/layui.js"></script>
+	<script type="text/javascript" src="CardManagement/public/js/invoker.js"></script>
+	<script type="text/javascript" src="CardManagement/public/js/utils.js"></script>
+</head>
+<body>
+<script>$(document).ready(function(c) {
+	$('.close').on('click', function(c){
+		$('.login-form').fadeOut('slow', function(c){
+	  		$('.login-form').remove();
+		});
+	});	  
+});
+</script>
+<h1>欢迎光临！Welcome!</h1>
+<div class="login-form">
+	<div class="close"> </div>
+		<div class="head-info">
+			<label class="lbl-1"> </label>
+			<label class="lbl-2"> </label>
+			<label class="lbl-3"> </label>
+		</div>
+	<!--<div class="clear"></div>-->
+	<div class="avtar">
+		<img src="images/avtar.png" />
+	</div>
+					<input type="text" class="account_text" value="学号" onfocus="this.value = '';"
+						   onblur="if (this.value == '') {this.value = '学号';}" >
+						<div class="key">
+						<input type="password" value="123456" onfocus="this.value = '';"
+						   onblur="if (this.value == '') {this.value = '123456';}">
+						</div>
+	<div class="code">
+		<input type="text" class="code_text" value="验证码" onfocus="this.value = '';"
+			   onblur="if (this.value == '') {this.value = '验证码';}">
+		<div class="code_pic">
+			<img src="http://localhost:8888/healthyLife/loginController/checkCode" class="code_img">
+		</div>
+	</div>
+	<!--<div class="code">
+					<input type="text" class="code_text" value="验证码" onfocus="this.value = '';"
+						   onblur="if (this.value == '') {this.value = '验证码';}">
+	<div class="code_pic"></div>-->
+		<input type="submit" value="登录" >
+</div>
+
+</body>
+</html>

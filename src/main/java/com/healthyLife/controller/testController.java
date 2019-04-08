@@ -17,7 +17,7 @@ import java.util.Map;
 @RequestMapping("testController")
 public class testController {
 
-    @Autowired
+    /*@Autowired
     private UserService userService;
 
     @RequestMapping("/login")
@@ -43,6 +43,6 @@ public class testController {
         System.out.println(request.getParameter("account")+"******"+request.getParameter("password"));
         result.setResult(userService.testService(null));
         return result;
-    }
+    }*/
 
 }

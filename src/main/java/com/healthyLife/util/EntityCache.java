@@ -11,7 +11,7 @@ public class EntityCache {
     private  Object datas;
 
     /**
-     * 设置数据失效时间,为0表示永不失效
+     * 设置数据失效时间,为0表示永不失效(单位毫秒)
      */
     private  long timeOut;
 

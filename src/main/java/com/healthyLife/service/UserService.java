@@ -13,7 +13,7 @@ import java.util.Map;
 public interface UserService {
 
 	//测试数据交互
-	List<Map<String,Object>> testService(Map<String,String> map);
+	//List<Map<String,Object>> testService(Map<String,String> map);
 
 	//删除用户信息
 	//int deleteUser(Integer id);
@@ -27,7 +27,7 @@ public interface UserService {
 	 * 返回2：管理员
 	 * 返回3：账户异常
 	 */
-	Map<String,String> user_login(Map<String,String> map);
+	//Map<String,String> user_login(Map<String,String> map);
 
 
 

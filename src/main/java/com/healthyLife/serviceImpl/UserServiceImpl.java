@@ -15,7 +15,7 @@ import java.util.Map;
 
 @Service("userService")
 public class UserServiceImpl implements UserService {
-    @Autowired
+    /*@Autowired
     private UserMapper userMapper;
 
     @Override
@@ -121,5 +121,5 @@ public class UserServiceImpl implements UserService {
                 return result;
             }
         }
-    }
+    }*/
 }

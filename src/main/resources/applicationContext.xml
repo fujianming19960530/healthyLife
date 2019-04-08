@@ -18,25 +18,19 @@
 
     <!-- 静态资源 -->
     <!-- html映射 -->
-    <mvc:resources mapping="/gt_login/**" location="/gentleman/gt_login/" />
-    <mvc:resources mapping="/gt_manage/**" location="/gentleman/gt_manage/" />
-    <mvc:resources mapping="/gt_portal/**" location="/gentleman/gt_portal/" />
-    <mvc:resources mapping="/home/**" location="/gentleman/gt_portal/home/" />
-    <mvc:resources mapping="/public/**" location="/gentleman/public/" />
+    <mvc:resources mapping="/public/**" location="/CardManagement/public/" />
+    <mvc:resources mapping="/login/**" location="/CardManagement/login/" />
 
 
     <!-- js映射 -->
-    <mvc:resources mapping="/js/**" location="/gentleman/gt_login/js/" />
-    <mvc:resources mapping="/js/**" location="/gentleman/gt_portal/home/js/" />
-    <mvc:resources mapping="/js/**" location="/gentleman/public/js/" />
-    <mvc:resources mapping="/layui/**" location="/gentleman/public/layui/" />
+    <mvc:resources mapping="/js/**" location="/CardManagement/public/js/" />
+    <mvc:resources mapping="/layui/**" location="/CardManagement/public/layui/" />
 
     <!-- css映射 -->
-    <mvc:resources mapping="/css/**" location="/gentleman/gt_login/css/" />
+    <mvc:resources mapping="/css/**" location="/CardManagement/login/css/" />
 
     <!-- picture映射 -->
-    <mvc:resources mapping="/picture/**" location="/gentleman/gt_login/picture/" />
-
+    <mvc:resources mapping="/images/**" location="/CardManagement/login/images/" />
     <!-- 导入DAO配置 -->
     <import resource="spring-dao.xml"/>
 

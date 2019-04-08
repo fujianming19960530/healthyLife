@@ -19,24 +19,39 @@ public interface UserMapper {
      * @param map
      * 参数：根据数据库字段查询（都可以传）
      */
-    List<Map<String,Object>> queryUserByCondition(Map<String,String> map);
+    //List<Map<String,Object>> queryUserByCondition(Map<String,String> map);
 
     /**
      *查询管理员信息
      * @param map
      * 参数：根据数据库字段查询（都可以传）
      */
-    List<Map<String,Object>> queryAdminByCondition(Map<String,String> map);
+    //List<Map<String,Object>> queryAdminByCondition(Map<String,String> map);
 
     /**
      * 查询封号信息表
      */
-    Map<String,Object> queryUserSuspend(Map<String,String> map);
+    //Map<String,Object> queryUserSuspend(Map<String,String> map);
 
     /**
      * 用户解封
      * @param mem_user_id
      * @return
      */
-    Integer unblockUser(String mem_user_id);
+    //Integer unblockUser(String mem_user_id);
+
+
+    /**
+     * 查询单个用户信息
+     * @param map
+     * @return
+     */
+    Map<String,Object> queryOneUserInfoByCondition(Map<String,String> map);
+
+    /**
+     * 查询多个用户信息
+     * @param map
+     * @return
+     */
+    List<Map<String,Object>> queryListUserInfoByCondition(Map<String,String> map);
 }
