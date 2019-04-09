@@ -45,6 +45,9 @@ public class RandomValidateCode {
         }
         session.removeAttribute(RANDOMCODEKEY);
         session.setAttribute(RANDOMCODEKEY, randomString);
+        //放缓存
+        CacheManagerImpl cacheManagerImpl = new CacheManagerImpl();
+        cacheManagerImpl.putCache("RANDOMCODEKEY",randomString,7200000);
         g.dispose();
         try {
             //将内存中的图片通过流动形式输出到客户端

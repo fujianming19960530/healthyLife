@@ -20,17 +20,23 @@
     <!-- html映射 -->
     <mvc:resources mapping="/public/**" location="/CardManagement/public/" />
     <mvc:resources mapping="/login/**" location="/CardManagement/login/" />
+    <mvc:resources mapping="/index/**" location="/CardManagement/index/" />
 
 
     <!-- js映射 -->
     <mvc:resources mapping="/js/**" location="/CardManagement/public/js/" />
     <mvc:resources mapping="/layui/**" location="/CardManagement/public/layui/" />
+    <mvc:resources mapping="/js/**" location="/CardManagement/login/js/" />
+    <mvc:resources mapping="/js/**" location="/CardManagement/index/assets/js/" />
 
     <!-- css映射 -->
     <mvc:resources mapping="/css/**" location="/CardManagement/login/css/" />
+    <mvc:resources mapping="/css/**" location="/CardManagement/index/assets/css/" />
 
     <!-- picture映射 -->
     <mvc:resources mapping="/images/**" location="/CardManagement/login/images/" />
+    <mvc:resources mapping="/img/**" location="/CardManagement/index/assets/img/" />
+
     <!-- 导入DAO配置 -->
     <import resource="spring-dao.xml"/>
 
