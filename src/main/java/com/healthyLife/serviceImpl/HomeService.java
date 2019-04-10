@@ -65,4 +65,16 @@ public class HomeService implements HomeServiceInterface{
             }
         }
     }
+
+    /**
+     * 查询全部的通知信息
+     * @param map
+     * @return
+     */
+    @Override
+    public ResponseResult userNoticeShow(Map<String, String> map) {
+        ResponseResult result = new ResponseResult(Const.CODE_INFO.CODE_0000);
+        result.setResult(userMapper.queryUserNotice(map));
+        return result;
+    }
 }

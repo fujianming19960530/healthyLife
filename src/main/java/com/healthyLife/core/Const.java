@@ -36,6 +36,10 @@ public class Const {
 
     /** 应用编码规范 */
     public static class CODE_INFO {
+        /**业务处理成功*/
+        public static final CodeInfo CODE_0000 = new CodeInfo("0000", "业务处理成功", "Server :${message}");
+        /**业务处理失败*/
+        public static final CodeInfo CODE_0004 = new CodeInfo("0004", "业务处理失败", "Server :${message}");
         /**系统内部错误*/
         public static final CodeInfo CODE_20001 = new CodeInfo("20001", "系统内部错误:${message}", "Server Error:${message}");
         /**定位请求，设备定位请求数据不存在*/

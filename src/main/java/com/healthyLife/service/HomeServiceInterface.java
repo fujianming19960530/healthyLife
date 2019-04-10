@@ -20,4 +20,11 @@ public interface HomeServiceInterface {
      */
     ResponseResult userLogin(Map<String,String> map);
 
+    /**
+     * 查询全部的通知信息
+     * @param map
+     * @return
+     */
+    ResponseResult userNoticeShow(Map<String,String> map);
+
 }

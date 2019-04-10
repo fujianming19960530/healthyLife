@@ -34,11 +34,11 @@ var index = {
         var password = $("#password").val();
         var code = $("#code").val();
         if(account == "" || password == ""){
-            alert("用户名或密码不能为空！")
+            alert("用户名或密码不能为空！");
             return false
         }
         if(code == ""){
-            alert("验证码不能为空！")
+            alert("验证码不能为空！");
             return false
         }
         var param = {};

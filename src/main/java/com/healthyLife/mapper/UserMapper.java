@@ -30,4 +30,11 @@ public interface UserMapper {
      * @return
      */
     Map<String,Object> queryOneAdminInfoByCondition(Map<String,String> map);
+
+    /**
+     * 查询全部的用户通知信息
+     * @param map
+     * @return
+     */
+    List<Map<String,Object>> queryUserNotice(Map<String,String> map);
 }
