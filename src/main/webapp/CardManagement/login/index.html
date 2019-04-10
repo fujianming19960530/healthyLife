@@ -21,17 +21,22 @@
 	<div class="avtar">
 		<img src="images/avtar.png" />
 	</div>
-					<input type="text" class="account_text" id="account" value="学号" onfocus="this.value = '';"
-						   onblur="if (this.value == '') {this.value = '学号';}" >
+					<input type="text" class="account_text" id="account" placeholder="学号" >
 						<div class="key">
-						<input type="password" value="123456" id="password" onfocus="this.value = '';"
-						   onblur="if (this.value == '') {this.value = '123456';}">
+						<input type="password" id="password" placeholder="密码">
 						</div>
 	<div class="code">
-		<input type="text" class="code_text" value="验证码" id="code" onfocus="this.value = '';"
-			   onblur="if (this.value == '') {this.value = '验证码';}">
+		<input type="text" class="code_text" id="code" placeholder="验证码">
 		<div class="code_pic">
 			<img id="code_img" src="" class="code_img">
+		</div>
+	</div>
+	<div class="foot" id="foot">
+		<div class="remember">
+			<p id="remember"><input type="checkbox" name="vehicle" value="" />记住密码</p>
+		</div>
+		<div id="login_click">
+			<a id="btlogin" href="javascript:void(0)">重 置</a>
 		</div>
 	</div>
 		<input type="submit" id="login" value="登录" >

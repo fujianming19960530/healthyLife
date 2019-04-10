@@ -25,9 +25,13 @@ public class HomeService implements HomeServiceInterface{
         userInfo.put("account",map.get("account"));
         //根据用户编号查询数据库用户信息（单个用户）
         Map<String,Object> responseMap = userMapper.queryOneUserInfoByCondition(userInfo);
+        if(responseMap == null){
+            //查询一下是否是管理员
+            responseMap = userMapper.queryOneAdminInfoByCondition(userInfo);
+        }
         //未查询到用户
         if(responseMap == null){
-            //用户名或密码错误
+            //用户名或密码错误(用户不存在)
             result.setRes_code(Const.login.LOGIN_MESSAGE_CODE_004.getCode());
             return result;
         }else {

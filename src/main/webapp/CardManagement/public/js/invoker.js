@@ -4,7 +4,6 @@
 * objects：参数对象
 * callback:调用的函数，调用的时候直接callback（data）即可取到数据
 * */
-console.log($("#account").val());
 function getResult(url,objects,callback) {
     $.ajax({
         type : 'post',

@@ -35,7 +35,7 @@ public class userLoginController {
     //用户登录信息
     @RequestMapping("/login")
     @ResponseBody
-    public ResponseResult login(@RequestBody Map<String,String> request, HttpSession session) {
+    public ResponseResult login(@RequestBody Map<String,String> request) {
         ResponseResult result = new ResponseResult(Const.login.LOGIN_MESSAGE_CODE_1000);
         Map<String,String> requestMap = new HashMap<>();
         requestMap.put("account",request.get("account"));

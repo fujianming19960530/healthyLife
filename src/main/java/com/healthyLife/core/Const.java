@@ -30,6 +30,8 @@ public class Const {
         public static final CodeInfo LOGIN_MESSAGE_CODE_001 = new CodeInfo("001","失败","登录失败，账号存在异常");
         /**验证码校验失败*/
         public static final CodeInfo LOGIN_MESSAGE_CODE_005 = new CodeInfo("005","失败","登录失败，验证码校验失败");
+        /**登录超时*/
+        public static final CodeInfo LOGIN_TIMEOUT_CODE_001 = new CodeInfo("0004","超时","登录超时");
     }
 
     /** 应用编码规范 */

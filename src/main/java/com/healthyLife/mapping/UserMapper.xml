@@ -44,10 +44,24 @@
 
   <select id="queryOneUserInfoByCondition" parameterType="map" resultType="map">
   SELECT * from mem_user
+  <where>
+    <if test="account != null">
+      and account = #{account}
+    </if>
+  </where>
   </select>
 
   <select id="queryListUserInfoByCondition" parameterType="map" resultType="map">
   SELECT * from mem_user
+  </select>
+
+  <select id="queryOneAdminInfoByCondition" parameterType="map" resultType="map">
+    SELECT * from sys_user
+    <where>
+      <if test="account != null">
+        and account = #{account}
+      </if>
+    </where>
   </select>
 
 
