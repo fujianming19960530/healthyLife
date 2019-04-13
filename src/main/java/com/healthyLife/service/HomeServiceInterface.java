@@ -27,4 +27,11 @@ public interface HomeServiceInterface {
      */
     ResponseResult userNoticeShow(Map<String,String> map);
 
+    /**
+     * 查询拾卡信息
+     * @param map account :拾卡人学号 user_name：姓名
+     * @return
+     */
+    ResponseResult queryPickUpCardUserInfoByCondition(Map<String,String> map);
+
 }

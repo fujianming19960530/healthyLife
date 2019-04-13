@@ -1,46 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.healthyLife.mapper.UserMapper">
-  <!--<select id="queryUserByCondition" parameterType="map" resultType="map">
-    select * from mem_user
-    <where>
-      <if test="mem_user_id != null">
-        and mem_user_id = #{mem_user_id}
-      </if>
-      <if test="mem_user_name">
-        and mem_user_name like '%'||#{mem_user_name}||'%'
-      </if>
-      &lt;!&ndash;<if test=""></if>&ndash;&gt;
-    </where>
-  </select>
-
-  <select id="queryAdminByCondition" parameterType="map" resultType="map">
-    SELECT * from sys_user
-    <where>
-      <if test="mem_user_id != null">
-        and sys_user_id = #{mem_user_id}
-      </if>
-    </where>
-  </select>
-
-  <select id="queryUserSuspend" parameterType="map" resultType="map">
-    SELECT * from sys_suspend
-    <where>
-      <if test="mem_user_id != null">
-        and user_id = #{mem_user_id}
-      </if>
-    </where>
-  </select>
-
-  <select id="unblockUser" parameterType="java.lang.String">
-    DELETE from sys_suspend
-    <where>
-      <if test="mem_user_id != null">
-        and user_id = #{mem_user_id}
-      </if>
-    </where>
-    /*where user_id = 1000003*/
-  </select>-->
 
   <select id="queryOneUserInfoByCondition" parameterType="map" resultType="map">
   SELECT * from mem_user
@@ -69,6 +29,22 @@
     <where>
       <if test="notice_id != null">
         and notice_id = #{notice_id}
+      </if>
+    </where>
+  </select>
+
+  <select id="queryPickUpCardUserInfoByCondition" parameterType="map" resultType="map">
+    SELECT cp.card_pickup_name,cp.card_pickup_account,
+      cp.card_id,cp.card_pickup_phone,cp.card_pickup_addr,mu.account,mu.user_name
+    from card_pickup cp
+    left join mem_user mu on mu.card_id = cp.card_id
+    <!-- 动态sql -->
+    <where>
+      <if test="account != null">
+        and cp.card_pickup_account = #{account}
+      </if>
+      <if test="user_name != null">
+        and cp.card_pickup_name = #{user_name}
       </if>
     </where>
   </select>

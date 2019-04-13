@@ -48,7 +48,7 @@ var index = {
         Invoker.invokeRequest("loginController/login",param,function login(data){
             console.log(data);
             if(data.res_code == "1000"){
-                window.location.href="index/index.html";
+                window.location.href="index/head.html";
             }
             if(data.res_code == "2000"){
                 window.location.href="manage/index.html";
