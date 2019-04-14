@@ -138,7 +138,6 @@ var index = {
         });
         $("#jump").bind("click",function (){
             var now = parseInt($("#jumppage").val());
-            console.log(now);
             if(Number.isInteger(now)){
                 if(now > 0 && now < totalPage+1){
                     nowPage = now;
