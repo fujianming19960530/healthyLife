@@ -34,4 +34,11 @@ public interface HomeServiceInterface {
      */
     ResponseResult queryPickUpCardUserInfoByCondition(Map<String,String> map);
 
+    /**
+     * 查询失卡信息
+     * @param map
+     * @return
+     */
+    ResponseResult queryLoseCardUserInfoByCondition(Map<String,String> map);
+
 }

@@ -84,4 +84,11 @@ public class HomeService implements HomeServiceInterface{
         result.setResult(userMapper.queryPickUpCardUserInfoByCondition(map));
         return result;
     }
+
+    @Override
+    public ResponseResult queryLoseCardUserInfoByCondition(Map<String, String> map) {
+        ResponseResult result = new ResponseResult(Const.CODE_INFO.CODE_0000);
+        result.setResult(userMapper.queryLoseCardUserInfoByCondition(map));
+        return result;
+    }
 }

@@ -40,11 +40,25 @@
     left join mem_user mu on mu.card_id = cp.card_id
     <!-- 动态sql -->
     <where>
-      <if test="account != null">
-        and cp.card_pickup_account = #{account}
+      <if test="code != null and code != ''">
+        and cp.card_pickup_account = #{code}
+        or cp.card_pickup_name = #{code}
       </if>
-      <if test="user_name != null">
+      <!--<if test="user_name != null">
         and cp.card_pickup_name = #{user_name}
+      </if>-->
+    </where>
+  </select>
+
+  <select id="queryLoseCardUserInfoByCondition" parameterType="map" resultType="map">
+    SELECT mu.user_name,mu.card_id,mu.account,mu.telphone,mu.address
+    from card_lose cl
+    left join mem_user mu on mu.card_id = cl.card_id
+    <!-- 动态sql -->
+    <where>
+      <if test="code != null and code != ''">
+        and mu.account = #{code}
+        or mu.user_name = #{code}
       </if>
     </where>
   </select>

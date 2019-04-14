@@ -44,4 +44,11 @@ public interface UserMapper {
      * @return
      */
     List<Map<String,Object>> queryPickUpCardUserInfoByCondition(Map<String,String> map);
+
+    /**
+     * 查询失卡信息
+     * @param map account :拾卡人学号 user_name：姓名
+     * @return
+     */
+    List<Map<String,Object>> queryLoseCardUserInfoByCondition(Map<String,String> map);
 }
