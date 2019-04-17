@@ -63,5 +63,12 @@
     </where>
   </select>
 
+  <select id="InsertUserInfo" parameterType="map">
+    insert into mem_user(account,password,birthday,role_level,user_name,
+    telphone,address,card_id,profession,user_class)
+    VALUE (#{account},#{password},#{birthday},#{role_level},#{user_name},
+    #{telphone},#{address},#{card_id},#{profession},#{user_class})
+  </select>
+
 
 </mapper>

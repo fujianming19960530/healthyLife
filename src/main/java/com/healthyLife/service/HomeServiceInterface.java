@@ -41,4 +41,11 @@ public interface HomeServiceInterface {
      */
     ResponseResult queryLoseCardUserInfoByCondition(Map<String,String> map);
 
+    /**
+     * 用户注册
+     * @param map
+     * @return
+     */
+    ResponseResult Registertion(Map<String,Object> map);
+
 }

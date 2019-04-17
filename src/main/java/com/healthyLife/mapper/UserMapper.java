@@ -51,4 +51,11 @@ public interface UserMapper {
      * @return
      */
     List<Map<String,Object>> queryLoseCardUserInfoByCondition(Map<String,String> map);
+
+    /**
+     * 插入用户信息
+     * @param map
+     * @return
+     */
+    Integer InsertUserInfo(Map<String,Object> map);
 }

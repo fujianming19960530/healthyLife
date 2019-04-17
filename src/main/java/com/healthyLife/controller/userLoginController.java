@@ -62,4 +62,12 @@ public class userLoginController {
             e.printStackTrace();
         }
     }
+
+    @RequestMapping(value="/userReistertion")
+    @ResponseBody
+    public ResponseResult userReistertion(@RequestBody Map<String,Object> request){
+        ResponseResult result = new ResponseResult(Const.login.LOGIN_MESSAGE_CODE_1000);
+        result.setResult(homeServiceInterface.Registertion(request));
+        return result;
+    }
 }

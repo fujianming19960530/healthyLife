@@ -13,6 +13,12 @@ var index = {
     init:function () {
         var me = this;
         me.noticeShow();
+        me.clickShow();
+    },
+    clickShow:function () {
+      $("#manage").bind("click",function () {
+          window.location.href="../manage/index.html";
+      })  
     },
     noticeShow:function () {
         var me = this;
@@ -80,7 +86,19 @@ var index = {
                 }
             }
             //分页插件
-            var page = "<div class=\"pagination\" style='margin-left: 30%'>\n" +
+            var page = "<ul id=\"losepageUl\" class=\"pagination\">\n" +
+                "<li><a id=\"uppage\" href=\"javascript:void(0)\">&laquo;</a></li>\n" +
+                "<li><a id=\"first\" href=\"javascript:void(0)\">首页</a></li>\n" +
+                /*"<li><a id=\"loseOne\" href=\"javascript:void(0)\">1</a></li>\n" +*/
+                "<li><a id=\"two\" href=\"javascript:void(0)\">2</a></li>\n" +
+                /*"<li><a id=\"loseThree\" href=\"javascript:void(0)\">3</a></li>\n" +*/
+                "<li><a id=\"last\" href=\"javascript:void(0)\">尾页</a></li>\n" +
+                "<li><a id=\"downpage\" href=\"javascript:void(0)\">&raquo;</a></li>\n" +
+                "<li><a id=\"jump\" href=\"javascript:void(0)\">跳页</a></li>\n" +
+                "<li><input id=\"jumppage\" style=\"width: 40px\" type=\"text\"></li>\n" +
+                "</ul>";
+
+            /*var page = "<div class=\"pagination\" style='margin-left: 30%'>\n" +
                 "<a id='first' href=\"javascript:void(0)\" class=\"page\">首页</a>\n" +
                 "<a id='uppage' href=\"javascript:void(0)\" class=\"page\">上一页</a>\n" +
                 "<a id='two' href=\"javascript:void(0)\" class=\"page\">1</a>\n" +
@@ -88,7 +106,7 @@ var index = {
                 "<a id='last' href=\"javascript:void(0)\" class=\"page\">末页</a>\n" +
                 "<a id='jump' href=\"javascript:void(0)\" class=\"page\" >跳页</a>\n" +
                 "<input style=\"width: 30px\" type=\"text\" class=\"page\" id='jumppage' value=\"1\" >\n" +
-                "</div>";
+                "</div>";*/
             $(".notice_show").append(page);
             $("#two").html(nowPage);
         }

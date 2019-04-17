@@ -91,4 +91,24 @@ public class HomeService implements HomeServiceInterface{
         result.setResult(userMapper.queryLoseCardUserInfoByCondition(map));
         return result;
     }
+
+    @Override
+    public ResponseResult Registertion(Map<String, Object> map) {
+        ResponseResult result = new ResponseResult(Const.CODE_INFO.CODE_0000);
+        //设置初始权限和初始积分
+        map.put("role_level","00");
+        Map<String,String> request = new HashMap<>();
+        request.put("account",map.get("account").toString());
+        //检查用户账号是否已使用
+        Map<String,Object> userInfo = userMapper.queryOneUserInfoByCondition(request);
+        if(userInfo == null){
+            userMapper.InsertUserInfo(map);
+            result.setRes_code(Const.CODE_INFO.CODE_0000.getCode());
+            return result;
+        }
+        else {
+            result.setRes_code(Const.CODE_INFO.CODE_0004.getCode());
+            return result;
+        }
+    }
 }
