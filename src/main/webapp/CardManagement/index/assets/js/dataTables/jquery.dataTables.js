@@ -347,11 +347,11 @@
 		/* Backwards compatibility - if there is no sEmptyTable given, then use the same as
 		 * sZeroRecords - assuming that is given.
 		 */
-		if ( !oLanguage.sEmptyTable && zeroRecords &&
+		/*if ( !oLanguage.sEmptyTable && zeroRecords &&
 			oDefaults.sEmptyTable === "No data available in table" )
 		{
 			_fnMap( oLanguage, oLanguage, 'sZeroRecords', 'sEmptyTable' );
-		}
+		}*/
 	
 		/* Likewise with loading records */
 		if ( !oLanguage.sLoadingRecords && zeroRecords &&
@@ -10571,7 +10571,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			"sEmptyTable": "",
 	
 	
 			/**
@@ -10603,7 +10603,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+			"sInfo": "展示 _END_ 条数据，共 _TOTAL_ 条数据",
 	
 	
 			/**
@@ -10624,7 +10624,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "Showing 0 to 0 of 0 entries",
+			"sInfoEmpty": "展示 0 条数据，共 0 条数据",
 	
 	
 			/**
@@ -10860,7 +10860,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sZeroRecords": "No matching records found"
+			"sZeroRecords": ""
 		},
 	
 	

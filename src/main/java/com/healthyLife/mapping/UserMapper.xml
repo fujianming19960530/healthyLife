@@ -26,11 +26,10 @@
 
   <select id="queryUserNotice" parameterType="map" resultType="map">
       select * from mem_notice
-    <where>
+        where 1=1
       <if test="notice_id != null">
         and notice_id = #{notice_id}
       </if>
-    </where>
   </select>
 
   <select id="queryPickUpCardUserInfoByCondition" parameterType="map" resultType="map">
@@ -70,5 +69,48 @@
     #{telphone},#{address},#{card_id},#{profession},#{user_class})
   </select>
 
+  <select id="queryNumber" parameterType="map" resultType="map">
+    select sum(transaction_number) transaction_number from finance f
+    where 1=1
+    <if test="type != null and type != ''">
+      and f.transaction_type = #{type}
+    </if>
+    <if test="card_id != null and card_id != ''">
+      and f.transaction_cardId = #{card_id}
+    </if>
+  </select>
+
+  <select id="queryFinance" parameterType="map" resultType="map">
+    SELECT * from finance f
+    WHERE 1=1
+    <if test="type != null and type != ''">
+      and f.transaction_type = #{type}
+    </if>
+    <if test="card_id != null and card_id != ''">
+      and f.transaction_cardId = #{card_id}
+    </if>
+    ORDER by f.transaction_date desc
+  </select>
+
+  <select id="allAccess" parameterType="map" resultType="map">
+    SELECT * from access a
+    where 1 = 1
+    <if test="card_id != null and card_id != ''">
+      and a.access_card = #{card_id}
+    </if>
+    ORDER by a.access_date desc
+  </select>
+
+  <select id="updateNotice" parameterType="map" resultType="int">
+    update mem_notice mn
+    set mn.notice_title = #{title},
+    mn.notice_content = #{detail}
+    WHERE mn.notice_id = #{notice_id}
+  </select>
+
+    <select id="delNotices" parameterType="map" resultType="int">
+    DELETE from mem_notice
+    where notice_id = #{notice_id}
+    </select>
 
 </mapper>

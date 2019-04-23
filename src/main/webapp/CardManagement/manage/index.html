@@ -2,530 +2,423 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Dream</title>
-    <!-- Bootstrap Styles-->
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
-    <!-- FontAwesome Styles-->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
-    <!-- Morris Chart Styles-->
-    <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
-    <!-- Custom Styles-->
-    <link href="assets/css/custom-styles.css" rel="stylesheet" />
-    <!-- Google Fonts-->
-    
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/font-awesome.css" rel="stylesheet"/>
+    <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet"/>
+    <link href="assets/css/custom-styles.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="js/data-tables/DT_bootstrap.css"/>
+    <link href="js/advanced-datatable/css/demo_page.css" rel="stylesheet"/>
+    <link href="js/advanced-datatable/css/demo_table.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="js/data-tables/DT_bootstrap.css"/>
+    <link href="css/style-responsive.css" rel="stylesheet">
+    <link href="css/style_.css" rel="stylesheet">
 </head>
 
 <body>
-    <div id="wrapper">
-        <nav class="navbar navbar-default top-navbar" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Dream</a>
-            </div>
-
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Doe</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Today</em>
-                                    </span>
-                                </div>
-                                <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem Ipsum has been the industry's standard dummy text ever since an kwilnw...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem Ipsum has been the industry's standard dummy text ever since the...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-messages -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-tasks">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 1</strong>
-                                        <span class="pull-right text-muted">60% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">60% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 2</strong>
-                                        <span class="pull-right text-muted">28% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" style="width: 28%">
-                                            <span class="sr-only">28% Complete</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 3</strong>
-                                        <span class="pull-right text-muted">60% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                            <span class="sr-only">60% Complete (warning)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <p>
-                                        <strong>Task 4</strong>
-                                        <span class="pull-right text-muted">85% Complete</span>
-                                    </p>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
-                                            <span class="sr-only">85% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Tasks</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-tasks -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-alerts">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                    <span class="pull-right text-muted small">12 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-tasks fa-fw"></i> New Task
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                    <span class="pull-right text-muted small">4 min</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>See All Alerts</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-alerts -->
-                </li>
-                <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
-        </nav>
-        <!--/. NAV TOP  -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-
+<div id="wrapper">
+    <div role="navigation">
+        <div class="left-side sticky-left-side">
+            <div class="left-side-inner" style="color: white">
+                <h3>高校一卡通管理系统</h3>
+                <ul class="nav nav-pills nav-stacked custom-nav">
                     <li>
-                        <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a id="user_info" href="javascript:void(0)"><i class="fa fa-dashboard"></i>个人基本信息管理</a>
                     </li>
                     <li>
-                        <a href="ui-elements.html"><i class="fa fa-desktop"></i> UI Elements</a>
-                    </li>
-					<li>
-                        <a href="chart.html"><i class="fa fa-bar-chart-o"></i> Charts</a>
+                        <a id="out" href="javascript:void(0)"><i class="fa fa-bar-chart-o"></i>出入记录查询功能</a>
                     </li>
                     <li>
-                        <a href="tab-panel.html"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
-                    </li>
-                    
-                    <li>
-                        <a href="table.html"><i class="fa fa-table"></i> Responsive Tables</a>
+                        <a id="com" href="javascript:void(0)"><i class="fa fa-qrcode"></i>通知信息管理</a>
                     </li>
                     <li>
-                        <a href="form.html"><i class="fa fa-edit"></i> Forms </a>
-                    </li>
-
-
-                    <li>
-                        <a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link</a>
-                            </li>
-                            <li>
-                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
-                                <ul class="nav nav-third-level">
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Third Level Link</a>
-                                    </li>
-
-                                </ul>
-
-                            </li>
-                        </ul>
+                        <a id="stu" href="javascript:void(0)"><i class="fa fa-qrcode"></i>学生信息管理</a>
                     </li>
                     <li>
-                        <a href="empty.html"><i class="fa fa-fw fa-file"></i> Empty Page</a>
+                        <a id="money" href="javascript:void(0)"><i class="fa fa-qrcode"></i>财务信息管理</a>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </div>
 
+    <!-- 导航栏 -->
+
+    <div id="page-wrapper" class="main-content">
+        <div id="page-inner">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="page-header">
+                        个人基本信息管理
+                    </h1>
+                </div>
             </div>
 
-        </nav>
-        <!-- /. NAV SIDE  -->
-        <div id="page-wrapper">
-            <div id="page-inner">
-
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="page-header">
-                            Dashboard <small>Summary of your App</small>
-                        </h1>
-                    </div>
-                </div>
-                <!-- /. ROW  -->
-
-                <div class="row">
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder bg-color-green">
-                            <div class="panel-body">
-                                <i class="fa fa-bar-chart-o fa-5x"></i>
-                                <h3>8,457</h3>
-                            </div>
-                            <div class="panel-footer back-footer-green">
-                                Daily Visits
-
-                            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            用户信息
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder bg-color-blue">
-                            <div class="panel-body">
-                                <i class="fa fa-shopping-cart fa-5x"></i>
-                                <h3>52,160 </h3>
-                            </div>
-                            <div class="panel-footer back-footer-blue">
-                                Sales
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder bg-color-red">
-                            <div class="panel-body">
-                                <i class="fa fa fa-comments fa-5x"></i>
-                                <h3>15,823 </h3>
-                            </div>
-                            <div class="panel-footer back-footer-red">
-                                Comments
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-primary text-center no-boder bg-color-brown">
-                            <div class="panel-body">
-                                <i class="fa fa-users fa-5x"></i>
-                                <h3>36,752 </h3>
-                            </div>
-                            <div class="panel-footer back-footer-brown">
-                                No. of Visits
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row">
-
-
-                    <div class="col-md-9 col-sm-12 col-xs-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Bar Chart Example
-                            </div>
-                            <div class="panel-body">
-                                <div id="morris-bar-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-12 col-xs-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Donut Chart Example
-                            </div>
-                            <div class="panel-body">
-                                <div id="morris-donut-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /. ROW  -->
-
-                <div class="row">
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Tasks Panel
-                            </div>
-                            <div class="panel-body">
-                                <div class="list-group">
-
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">7 minutes ago</span>
-                                        <i class="fa fa-fw fa-comment"></i> Commented on a post
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">16 minutes ago</span>
-                                        <i class="fa fa-fw fa-truck"></i> Order 392 shipped
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">36 minutes ago</span>
-                                        <i class="fa fa-fw fa-globe"></i> Invoice 653 has paid
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">1 hour ago</span>
-                                        <i class="fa fa-fw fa-user"></i> A new user has been added
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">1.23 hour ago</span>
-                                        <i class="fa fa-fw fa-user"></i> A new user has added
-                                    </a>
-                                    <a href="#" class="list-group-item">
-                                        <span class="badge">yesterday</span>
-                                        <i class="fa fa-fw fa-globe"></i> Saved the world
-                                    </a>
-                                </div>
-                                <div class="text-right">
-                                    <a href="#">More Tasks <i class="fa fa-arrow-circle-right"></i></a>
+                        <div class="panel-body">
+                            <div class="tab-content form-horizontal" style="margin-top: 30px">
+                                <div class="tab-pane fade active in" id="home-pills">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">姓名</label>
+                                        <div class="col-md-6 col-sm-6">
+                                            <input class="form-control" id="user_name" type="text" placeholder=""
+                                                   disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" id="adm">
+                                        <label class="col-sm-2 col-sm-2 control-label">账号</label>
+                                        <div class="col-md-6 col-sm-6">
+                                            <input class="form-control" id="admin_account" type="text" placeholder=""
+                                                   disabled>
+                                        </div>
+                                    </div>
+                                    <div id="admin_hide">
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">卡号</label>
+                                            <div class="col-md-6 col-sm-6">
+                                                <input class="form-control" id="card_id" type="text" placeholder=""
+                                                       disabled>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">学号</label>
+                                        <div class="col-md-6 col-sm-6">
+                                            <input class="form-control" id="account" type="text" placeholder=""
+                                                   disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">班级</label>
+                                        <div class="col-md-6 col-sm-6">
+                                            <input class="form-control" id="user_class" type="text" placeholder=""
+                                                   disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">卡类型</label>
+                                        <div class="col-md-6 col-sm-6">
+                                            <input class="form-control" id="card_type" type="text" placeholder=""
+                                                   disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">卡状态</label>
+                                        <div class="col-md-6 col-sm-6">
+                                            <input class="form-control" id="profession" type="text" placeholder=""
+                                                   disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">余额</label>
+                                        <div class="col-md-6 col-sm-6">
+                                            <input class="form-control" id="card_balance" type="text" placeholder=""
+                                                   disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">门禁</label>
+                                        <div class="col-md-6 col-sm-6">
+                                            <input class="form-control" id="out_role" type="text" placeholder=""
+                                                   disabled>
+                                        </div>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    <div class="col-md-8 col-sm-12 col-xs-12">
+                </div>
 
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Responsive Table Example
-                            </div> 
-                            <div class="panel-body">
-                                <div class="table-responsive">
-                                    <table class="table table-striped table-bordered table-hover">
+                <div class="col-md-6 col-sm-6" id="demo_mon">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            个人财务信息
+                        </div>
+                        <div class="col-sm-6" style="width: 100%">
+                            <section class="panel">
+                                <header class="panel-heading form-horizontal">
+                                    <button id="xf_all" class="btn btn-primary" type="button">交易记录</button>
+                                    <button id="xf_01" class="btn btn-primary" type="button">充值记录</button>
+                                    <button id="xf_00" class="btn btn-primary" type="button">消费记录</button>
+                                    <button id="cz_00" class="btn btn-primary" type="button">充值缴费</button>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label"
+                                               style="width: 150px">共计充值：</label>
+                                        <label class="col-sm-2 col-sm-2 control-label" id="queryFinanceIn">￥2300</label>
+                                        <label class="col-sm-2 col-sm-2 control-label"
+                                               style="width: 150px">共计消费：</label>
+                                        <label class="col-sm-2 col-sm-2 control-label"
+                                               id="queryFinanceOut">￥5000</label>
+                                    </div>
+                                </header>
+                                <div class="panel-body">
+                                    <table class="table table-hover">
                                         <thead>
-                                            <tr>
-                                                <th>S No.</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>User Name</th>
-                                                <th>Email ID.</th>
-                                            </tr>
+                                        <tr>
+                                            <th>交易类型</th>
+                                            <th>交易金额</th>
+                                            <th>交易卡号</th>
+                                            <th>交易时间</th>
+                                        </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>John</td>
-                                                <td>Doe</td>
-                                                <td>John15482</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Kimsila</td>
-                                                <td>Marriye</td>
-                                                <td>Kim1425</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Rossye</td>
-                                                <td>Nermal</td>
-                                                <td>Rossy1245</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Richard</td>
-                                                <td>Orieal</td>
-                                                <td>Rich5685</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>Jacob</td>
-                                                <td>Hielsar</td>
-                                                <td>Jac4587</td>
-                                                <td>name@site.com</td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td>Wrapel</td>
-                                                <td>Dere</td>
-                                                <td>Wrap4585</td>
-                                                <td>name@site.com</td>
-                                            </tr>
+                                        <tbody id="financeTbody">
+                                        </tbody>
+                                    </table>
+                                    <div><a id='more' href="javascript:void(0)">查看更多>></a></div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="outer_in">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="page-header">
+                        出入记录查询
+                    </h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                出入记录查询
+                            </header>
+                            <div class="panel-body">
+                                <div class="adv-table">
+                                    <table class="display table table-bordered table-striped" id="dynamic-table">
+                                        <thead>
+                                        <tr style="pointer-events: none;">
+                                            <th>记录卡号</th>
+                                            <th>出入信息</th>
+                                            <th>记录时间</th>
+                                            <th class="hidden-phone">门禁权限</th>
+                                            <th class="hidden-phone">操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tbody_out">
 
                                         </tbody>
                                     </table>
+                                    <ul id="indexpageUl" class="pagination">
+                                        <li><a id="indexUppage" href="javascript:void(0)">&laquo;</a></li>
+                                        <li><a id="indexFist" href="javascript:void(0)">首页</a></li>
+                                        <li><a id="indexOne" href="javascript:void(0)">1</a></li>
+                                        <li><a id="indexTwo" href="javascript:void(0)">2</a></li>
+                                        <li><a id="indexThree" href="javascript:void(0)">3</a></li>
+                                        <li><a id="indexLast" href="javascript:void(0)">尾页</a></li>
+                                        <li><a id="indexNextpage" href="javascript:void(0)">&raquo;</a></li>
+                                        <li><a id="indexJumpPage" href="javascript:void(0)">跳页</a></li>
+                                        <li><input id="indexjump_text" style="width: 40px;height: 35px" type="text">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="comment">
+            <div class="row" id="nt_msg">
+                <div class="col-md-12">
+                    <h1 class="page-header">
+                        通知信息查询
+                    </h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                通知信息查询
+                            </header>
+                            <div class="panel-body">
+                                <div class="adv-table">
+                                    <table class="display table table-bordered table-striped" id="dynamic-table">
+                                        <thead>
+                                        <tr>
+                                            <th>通知标题</th>
+                                            <th>通知时间</th>
+                                            <th class="hidden-phone">管理员</th>
+                                            <th class="hidden-phone">查看详情</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tbody_notice">
+
+                                        </tbody>
+                                    </table>
+                                    <ul id="pageUl" class="pagination">
+                                        <li><a id="Uppage" href="javascript:void(0)">&laquo;</a></li>
+                                        <li><a id="Fist" href="javascript:void(0)">首页</a></li>
+                                        <li><a id="One" href="javascript:void(0)">1</a></li>
+                                        <li><a id="Two" href="javascript:void(0)">2</a></li>
+                                        <li><a id="Three" href="javascript:void(0)">3</a></li>
+                                        <li><a id="Last" href="javascript:void(0)">尾页</a></li>
+                                        <li><a id="Nextpage" href="javascript:void(0)">&raquo;</a></li>
+                                        <li><a id="JumpPage" href="javascript:void(0)">跳页</a></li>
+                                        <li><input id="jump_text" style="width: 40px;height: 35px" type="text"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="student">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="page-header">
+                        学生信息查询
+                    </h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                学生信息查询
+                            </header>
+                            <div class="panel-body">
+                                <div class="adv-table">
+                                    <table class="display table table-bordered table-striped" id="dynamic-table">
+                                        <thead>
+                                        <tr>
+                                            <th>通知标题</th>
+                                            <th>通知时间</th>
+                                            <th class="hidden-phone">管理员</th>
+                                            <th class="hidden-phone">查看详情</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tbody_notice">
+
+                                        </tbody>
+                                    </table>
+                                    <ul id="pageUl" class="pagination">
+                                        <li><a id="Uppage" href="javascript:void(0)">&laquo;</a></li>
+                                        <li><a id="Fist" href="javascript:void(0)">首页</a></li>
+                                        <li><a id="One" href="javascript:void(0)">1</a></li>
+                                        <li><a id="Two" href="javascript:void(0)">2</a></li>
+                                        <li><a id="Three" href="javascript:void(0)">3</a></li>
+                                        <li><a id="Last" href="javascript:void(0)">尾页</a></li>
+                                        <li><a id="Nextpage" href="javascript:void(0)">&raquo;</a></li>
+                                        <li><a id="JumpPage" href="javascript:void(0)">跳页</a></li>
+                                        <li><input id="jump_text" style="width: 40px;height: 35px" type="text"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="admin_cw">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="page-header">
+                        财务信息查询
+                    </h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                财务信息查询
+                            </header>
+                            <div class="panel-body">
+                                <div class="adv-table">
+                                    <table class="display table table-bordered table-striped" id="dynamic-table">
+                                        <thead>
+                                        <tr>
+                                            <th>通知标题</th>
+                                            <th>通知时间</th>
+                                            <th class="hidden-phone">管理员</th>
+                                            <th class="hidden-phone">查看详情</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tbody_notice">
+
+                                        </tbody>
+                                    </table>
+                                    <ul id="pageUl" class="pagination">
+                                        <li><a id="Uppage" href="javascript:void(0)">&laquo;</a></li>
+                                        <li><a id="Fist" href="javascript:void(0)">首页</a></li>
+                                        <li><a id="One" href="javascript:void(0)">1</a></li>
+                                        <li><a id="Two" href="javascript:void(0)">2</a></li>
+                                        <li><a id="Three" href="javascript:void(0)">3</a></li>
+                                        <li><a id="Last" href="javascript:void(0)">尾页</a></li>
+                                        <li><a id="Nextpage" href="javascript:void(0)">&raquo;</a></li>
+                                        <li><a id="JumpPage" href="javascript:void(0)">跳页</a></li>
+                                        <li><input id="jump_text" style="width: 40px;height: 35px" type="text"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 下单模态框（Modal） -->
+        <div class="modal fade" id="mode_notice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            通知信息详情
+                        </h4>
+                        <div class="wrapper">
+                            <div class="row">
+                                <div id="headerRight">
+                                    <div contenteditable="true" id="notice_detail">
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                    <div class="modal-footer" id="nt">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
                     </div>
                 </div>
-                <!-- /. ROW  -->
-				<footer><p>Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://www.freemoban.com/">www.freemoban.com</a></p></footer>
             </div>
-            <!-- /. PAGE INNER  -->
         </div>
-        <!-- /. PAGE WRAPPER  -->
+        <footer><p>&copy; 2019 版权所有-<a href="javascript:void(0)" target="" title="">高校一卡通管理系统</a> - </p></footer>
     </div>
-    <!-- /. WRAPPER  -->
-    <!-- JS Scripts-->
-    <!-- jQuery Js -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-    <!-- Bootstrap Js -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Metis Menu Js -->
-    <script src="assets/js/jquery.metisMenu.js"></script>
-    <!-- Morris Chart Js -->
-    <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
-    <script src="assets/js/morris/morris.js"></script>
-    <!-- Custom Js -->
-    <script src="assets/js/custom-scripts.js"></script>
-
-
+</div>
+<script src="assets/js/jquery-1.10.2.js"></script>
+<script type="text/javascript" language="javascript" src="js/advanced-datatable/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="js/data-tables/DT_bootstrap.js"></script>
+<script src="js/dynamic_table_init.js"></script>
+<script src="../public/js/invoker.js"></script>
+<script src="assets/js/index.js"></script>
+<script src="../manage/assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>

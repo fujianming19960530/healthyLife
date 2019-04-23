@@ -102,6 +102,7 @@ public class HomeService implements HomeServiceInterface{
         //检查用户账号是否已使用
         Map<String,Object> userInfo = userMapper.queryOneUserInfoByCondition(request);
         if(userInfo == null){
+            map.put("card_id",map.get("account"));
             userMapper.InsertUserInfo(map);
             result.setRes_code(Const.CODE_INFO.CODE_0000.getCode());
             return result;
@@ -110,5 +111,49 @@ public class HomeService implements HomeServiceInterface{
             result.setRes_code(Const.CODE_INFO.CODE_0004.getCode());
             return result;
         }
+    }
+
+    @Override
+    public ResponseResult queryFinance(Map<String, String> map) {
+        ResponseResult result = new ResponseResult(Const.CODE_INFO.CODE_0000);
+        Map<String,Object> responseMap = new HashMap<>();
+        CacheManagerImpl cacheManagerImpl = new CacheManagerImpl();
+        Object userInfo = cacheManagerImpl.getCacheDataByKey("userInfo");
+        map.put("card_id",((HashMap) userInfo).get("card_id").toString());
+        map.put("account",((HashMap) userInfo).get("account").toString());
+        responseMap.put("totalFinance",userMapper.queryFinance(map));
+        //01充值，00消费
+        map.put("type","01");
+        responseMap.put("queryFinanceIn",userMapper.queryNumber(map).get("transaction_number"));
+        map.put("type","00");
+        responseMap.put("queryFinanceOut",userMapper.queryNumber(map).get("transaction_number"));
+        responseMap.put("userInfo",userMapper.queryOneUserInfoByCondition(map));
+        result.setResult(responseMap);
+        return result;
+    }
+
+    @Override
+    public ResponseResult queryAccess(Map<String, String> map) {
+        ResponseResult result = new ResponseResult(Const.CODE_INFO.CODE_0000);
+        if(map.get("index").equals("index")){
+            CacheManagerImpl cacheManagerImpl = new CacheManagerImpl();
+            Object userInfo = cacheManagerImpl.getCacheDataByKey("userInfo");
+            map.put("card_id",((HashMap) userInfo).get("card_id").toString());
+        }
+        result.setResult(userMapper.allAccess(map));
+        return result;
+    }
+
+    @Override
+    public ResponseResult updateNotice(Map<String, String> map) {
+        ResponseResult result = new ResponseResult(Const.CODE_INFO.CODE_0000);
+        userMapper.updateNotice(map);
+        return result;
+    }
+
+    @Override
+    public Integer delNotices(Map<String, String> map) {
+        userMapper.delNotices(map);
+        return 0;
     }
 }

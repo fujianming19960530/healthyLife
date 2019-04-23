@@ -48,4 +48,31 @@ public interface HomeServiceInterface {
      */
     ResponseResult Registertion(Map<String,Object> map);
 
+    /**
+     * 查询用户交易信息
+     * @param map
+     * @return
+     */
+    ResponseResult queryFinance(Map<String,String> map);
+
+    /**
+     * 查询用户出入记录
+     * @param map
+     * @return
+     */
+     ResponseResult queryAccess(Map<String,String> map);
+
+    /**
+     * 修改通知信息
+     * @param map
+     * @return
+     */
+    ResponseResult updateNotice(Map<String,String> map);
+
+    /**
+     * 删除通知信息
+     * @param map
+     * @return
+     */
+    Integer delNotices(Map<String,String> map);
 }

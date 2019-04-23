@@ -54,10 +54,10 @@ var index = {
                 window.location.href="../index/head.html";
             }
             if(data.res_code == "2000"){
-                window.location.href="manage/index.html";
+                window.location.href="../manage/index.html";
             }
             if(data.res_code == "3000"){
-                window.location.href="manage/index.html";
+                window.location.href="../manage/index.html";
             }
             if(data.res_code == "005"){
                 alert("验证码错误");

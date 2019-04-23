@@ -58,4 +58,39 @@ public interface UserMapper {
      * @return
      */
     Integer InsertUserInfo(Map<String,Object> map);
+
+    /**
+     * 查询交易金额
+     * @param map
+     * @return
+     */
+    Map<String,Object> queryNumber(Map<String,String> map);
+
+    /**
+     * 查询交易记录
+     * @param map
+     * @return
+     */
+    List<Map<String,Object>> queryFinance(Map<String,String> map);
+
+    /**
+     * 查询全部的出入信息
+     * @param map
+     * @return
+     */
+    List<Map<String,String>> allAccess(Map<String,String> map);
+
+    /**
+     * 修改通知信息
+     * @param map
+     * @return
+     */
+    Integer updateNotice(Map<String,String> map);
+
+    /**
+     * 删除通知信息
+     * @param map
+     * @return
+     */
+    Integer delNotices(Map<String,String> map);
 }
