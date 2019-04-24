@@ -93,4 +93,25 @@ public interface UserMapper {
      * @return
      */
     Integer delNotices(Map<String,String> map);
+
+    /**
+     * 插入新的通知
+     * @param map
+     * @return
+     */
+    Integer insertNotice(Map<String,String> map);
+
+    /**
+     * 修改用户信息
+     * @param map
+     * @return
+     */
+    Integer updateUser(Map<String,String> map);
+
+    /**
+     * 删除用户
+     * @param map
+     * @return
+     */
+    Integer delUser(Map<String,String> map);
 }

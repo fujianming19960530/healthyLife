@@ -1,7 +1,6 @@
 package com.healthyLife.test;
 
 
-import com.healthyLife.service.UserService;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -12,8 +11,8 @@ import org.junit.Test;
 @ContextConfiguration(locations="classpath:applicationContext.xml")
 public class test {
 
-    @Autowired
-    private UserService userService;
+    /*@Autowired
+    private UserService userService;*/
 
     @Test
     public void demo0702(){

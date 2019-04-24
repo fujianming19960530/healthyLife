@@ -33,4 +33,16 @@ public class userNoticeController {
         result = homeServiceInterface.userNoticeShow(request);
         return result;
     }
+
+    /**
+     * 查询全部的通知消息
+     * @return
+     */
+    @RequestMapping("/addNotice")
+    @ResponseBody
+    public ResponseResult addNotice(@RequestBody Map<String,String> request){
+        ResponseResult result = new ResponseResult(Const.login.LOGIN_MESSAGE_CODE_1000);
+        homeServiceInterface.insertNotice(request);
+        return result;
+    }
 }

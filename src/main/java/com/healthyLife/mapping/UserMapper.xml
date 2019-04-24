@@ -13,6 +13,10 @@
 
   <select id="queryListUserInfoByCondition" parameterType="map" resultType="map">
   SELECT * from mem_user
+  where 1=1
+    <if test="account != null">
+      and account = #{account}
+    </if>
   </select>
 
   <select id="queryOneAdminInfoByCondition" parameterType="map" resultType="map">
@@ -112,5 +116,25 @@
     DELETE from mem_notice
     where notice_id = #{notice_id}
     </select>
+
+  <select id="insertNotice" parameterType="map" resultType="int">
+    insert into mem_notice(notice_title,notice_content,notice_date,admin_name)
+      VALUES(#{notice_title},#{notice_content},date_format(SYSDATE(),'%Y-%m-%d %T'),#{admin_name})
+  </select>
+
+  <select id="updateUser" parameterType="map" resultType="int">
+    update mem_user mu
+    set mu.user_name = #{user_name},
+		mu.card_id = #{card_id},
+		mu.user_class = #{user_class},
+		mu.out_role = #{out_role},
+      mu.profession = #{profession}
+    WHERE mu.account = #{account}
+  </select>
+
+  <select id="delUser" parameterType="map" resultType="int">
+    DELETE from mem_user
+      where account = #{account}
+  </select>
 
 </mapper>

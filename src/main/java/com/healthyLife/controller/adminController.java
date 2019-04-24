@@ -72,4 +72,30 @@ public class adminController {
         homeService.delNotices(request);
         return result;
     }
+
+    @RequestMapping(value="/queryuserInfo")
+    @ResponseBody
+    public ResponseResult queryuserInfo(@RequestBody Map<String,String> request){
+        ResponseResult result = new ResponseResult(Const.CODE_INFO.CODE_0000);
+        result = homeService.queryUserInfo(request);
+        return result;
+    }
+
+    @RequestMapping(value="/updateUser")
+    @ResponseBody
+    public ResponseResult updateUser(@RequestBody Map<String,String> request){
+        ResponseResult result = new ResponseResult(Const.CODE_INFO.CODE_0000);
+        homeService.updateUser(request);
+        return result;
+    }
+
+    @RequestMapping(value="/delUser")
+    @ResponseBody
+    public ResponseResult delUser(@RequestBody Map<String,String> request){
+        ResponseResult result = new ResponseResult(Const.CODE_INFO.CODE_0000);
+        homeService.delUser(request);
+        return result;
+    }
+
+
 }

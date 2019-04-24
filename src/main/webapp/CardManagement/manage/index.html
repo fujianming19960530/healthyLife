@@ -88,47 +88,47 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                        <label class="col-sm-2 col-sm-2 control-label">学号</label>
-                                        <div class="col-md-6 col-sm-6">
-                                            <input class="form-control" id="account" type="text" placeholder=""
-                                                   disabled>
+                                            <label class="col-sm-2 col-sm-2 control-label">学号</label>
+                                            <div class="col-md-6 col-sm-6">
+                                                <input class="form-control" id="account" type="text" placeholder=""
+                                                       disabled>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 col-sm-2 control-label">班级</label>
-                                        <div class="col-md-6 col-sm-6">
-                                            <input class="form-control" id="user_class" type="text" placeholder=""
-                                                   disabled>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">班级</label>
+                                            <div class="col-md-6 col-sm-6">
+                                                <input class="form-control" id="user_class" type="text" placeholder=""
+                                                       disabled>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 col-sm-2 control-label">卡类型</label>
-                                        <div class="col-md-6 col-sm-6">
-                                            <input class="form-control" id="card_type" type="text" placeholder=""
-                                                   disabled>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">卡类型</label>
+                                            <div class="col-md-6 col-sm-6">
+                                                <input class="form-control" id="card_type" type="text" placeholder=""
+                                                       disabled>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 col-sm-2 control-label">卡状态</label>
-                                        <div class="col-md-6 col-sm-6">
-                                            <input class="form-control" id="profession" type="text" placeholder=""
-                                                   disabled>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">卡状态</label>
+                                            <div class="col-md-6 col-sm-6">
+                                                <input class="form-control" id="profession" type="text" placeholder=""
+                                                       disabled>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 col-sm-2 control-label">余额</label>
-                                        <div class="col-md-6 col-sm-6">
-                                            <input class="form-control" id="card_balance" type="text" placeholder=""
-                                                   disabled>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">余额</label>
+                                            <div class="col-md-6 col-sm-6">
+                                                <input class="form-control" id="card_balance" type="text" placeholder=""
+                                                       disabled>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-sm-2 col-sm-2 control-label">门禁</label>
-                                        <div class="col-md-6 col-sm-6">
-                                            <input class="form-control" id="out_role" type="text" placeholder=""
-                                                   disabled>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 col-sm-2 control-label">门禁</label>
+                                            <div class="col-md-6 col-sm-6">
+                                                <input class="form-control" id="out_role" type="text" placeholder=""
+                                                       disabled>
+                                            </div>
                                         </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -195,7 +195,7 @@
                             </header>
                             <div class="panel-body">
                                 <div class="adv-table">
-                                    <table class="display table table-bordered table-striped" id="dynamic-table">
+                                    <table class="display table table-bordered table-striped" id="dynamic-tablesss">
                                         <thead>
                                         <tr style="pointer-events: none;">
                                             <th>记录卡号</th>
@@ -254,7 +254,7 @@
                                             <th>通知标题</th>
                                             <th>通知时间</th>
                                             <th class="hidden-phone">管理员</th>
-                                            <th class="hidden-phone">查看详情</th>
+                                            <th class="hidden-phone">操作</th>
                                         </tr>
                                         </thead>
                                         <tbody id="tbody_notice">
@@ -298,29 +298,30 @@
                             </header>
                             <div class="panel-body">
                                 <div class="adv-table">
-                                    <table class="display table table-bordered table-striped" id="dynamic-table">
+                                    <table class="display table table-bordered table-striped" id="dynamic-tables">
                                         <thead>
                                         <tr>
-                                            <th>通知标题</th>
-                                            <th>通知时间</th>
-                                            <th class="hidden-phone">管理员</th>
-                                            <th class="hidden-phone">查看详情</th>
+                                            <th>学生姓名</th>
+                                            <th>学生卡号</th>
+                                            <th>联系方式</th>
+                                            <th>学生班级</th>
+                                            <th>操作</th>
                                         </tr>
                                         </thead>
-                                        <tbody id="tbody_notice">
+                                        <tbody id="tbody_stu">
 
                                         </tbody>
                                     </table>
-                                    <ul id="pageUl" class="pagination">
-                                        <li><a id="Uppage" href="javascript:void(0)">&laquo;</a></li>
-                                        <li><a id="Fist" href="javascript:void(0)">首页</a></li>
-                                        <li><a id="One" href="javascript:void(0)">1</a></li>
-                                        <li><a id="Two" href="javascript:void(0)">2</a></li>
-                                        <li><a id="Three" href="javascript:void(0)">3</a></li>
-                                        <li><a id="Last" href="javascript:void(0)">尾页</a></li>
-                                        <li><a id="Nextpage" href="javascript:void(0)">&raquo;</a></li>
-                                        <li><a id="JumpPage" href="javascript:void(0)">跳页</a></li>
-                                        <li><input id="jump_text" style="width: 40px;height: 35px" type="text"></li>
+                                    <ul id="stu_pageUl" class="pagination">
+                                        <li><a id="stu_Uppage" href="javascript:void(0)">&laquo;</a></li>
+                                        <li><a id="stu_Fist" href="javascript:void(0)">首页</a></li>
+                                        <li><a id="stu_One" href="javascript:void(0)">1</a></li>
+                                        <li><a id="stu_Two" href="javascript:void(0)">2</a></li>
+                                        <li><a id="stu_Three" href="javascript:void(0)">3</a></li>
+                                        <li><a id="stu_Last" href="javascript:void(0)">尾页</a></li>
+                                        <li><a id="stu_Nextpage" href="javascript:void(0)">&raquo;</a></li>
+                                        <li><a id="stu_JumpPage" href="javascript:void(0)">跳页</a></li>
+                                        <li><input id="stu_jump_text" style="width: 40px;height: 35px" type="text"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -344,33 +345,34 @@
                     <div class="col-sm-12">
                         <section class="panel">
                             <header class="panel-heading">
-                                财务信息查询
+                                交易记录查询
                             </header>
                             <div class="panel-body">
                                 <div class="adv-table">
-                                    <table class="display table table-bordered table-striped" id="dynamic-table">
+                                    <table class="display table table-bordered table-striped" id="dynamic-tabless">
                                         <thead>
                                         <tr>
-                                            <th>通知标题</th>
-                                            <th>通知时间</th>
-                                            <th class="hidden-phone">管理员</th>
-                                            <th class="hidden-phone">查看详情</th>
+                                            <th>交易卡号</th>
+                                            <th>交易时间</th>
+                                            <th>交易金额</th>
+                                            <th>交易类型</th>
+                                            <th>操作</th>
                                         </tr>
                                         </thead>
-                                        <tbody id="tbody_notice">
+                                        <tbody id="tbody_cw">
 
                                         </tbody>
                                     </table>
-                                    <ul id="pageUl" class="pagination">
-                                        <li><a id="Uppage" href="javascript:void(0)">&laquo;</a></li>
-                                        <li><a id="Fist" href="javascript:void(0)">首页</a></li>
-                                        <li><a id="One" href="javascript:void(0)">1</a></li>
-                                        <li><a id="Two" href="javascript:void(0)">2</a></li>
-                                        <li><a id="Three" href="javascript:void(0)">3</a></li>
-                                        <li><a id="Last" href="javascript:void(0)">尾页</a></li>
-                                        <li><a id="Nextpage" href="javascript:void(0)">&raquo;</a></li>
-                                        <li><a id="JumpPage" href="javascript:void(0)">跳页</a></li>
-                                        <li><input id="jump_text" style="width: 40px;height: 35px" type="text"></li>
+                                    <ul id="cw_pageUl" class="pagination">
+                                        <li><a id="cw_Uppage" href="javascript:void(0)">&laquo;</a></li>
+                                        <li><a id="cw_Fist" href="javascript:void(0)">首页</a></li>
+                                        <li><a id="cw_One" href="javascript:void(0)">1</a></li>
+                                        <li><a id="cw_Two" href="javascript:void(0)">2</a></li>
+                                        <li><a id="cw_Three" href="javascript:void(0)">3</a></li>
+                                        <li><a id="cw_Last" href="javascript:void(0)">尾页</a></li>
+                                        <li><a id="cw_Nextpage" href="javascript:void(0)">&raquo;</a></li>
+                                        <li><a id="cw_JumpPage" href="javascript:void(0)">跳页</a></li>
+                                        <li><input id="cw_jump_text" style="width: 40px;height: 35px" type="text"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -380,7 +382,7 @@
             </div>
         </div>
 
-        <!-- 下单模态框（Modal） -->
+        <!-- 通知详情的动态div -->
         <div class="modal fade" id="mode_notice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
              aria-hidden="true">
             <div class="modal-dialog">
@@ -404,6 +406,212 @@
                     </div>
                     <div class="modal-footer" id="nt">
                         <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 新增通知的动态div -->
+        <div class="modal fade" id="add_notice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="mynewLabel">
+                            新增通知信息
+                        </h4>
+                        <div class="wrapper">
+                            <div class="row">
+                                <div id="headerRights">
+                                    <div contenteditable="true" id="nt_new">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" id="nt_tit" placeholder="输入通知标题">
+                                            <textarea class="form-control" id="nt_det" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" id="nt_sub">
+                        <button type="button" id="nt_sub_add" class="btn btn-default" data-dismiss="modal">提交
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 学生详情的动态div -->
+        <div class="modal fade" id="mode_stu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabels">
+                            学生详情
+                        </h4>
+                        <div class="wrapper">
+                            <div class="row">
+                                <div id="headerRightss">
+                                    <div contenteditable="" id="stu_detail">
+                                        <div class="tab-content form-horizontal" id="home-pill">
+                                            <div class="form-group">
+                                                <label class="col-sm-2 col-sm-2 control-label">姓名</label>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <input class="form-control" id="ad_user_name" type="text"
+                                                           placeholder=""
+                                                           disabled>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">卡号</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input class="form-control" id="ad_card_id" type="text"
+                                                               placeholder=""
+                                                               disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">学号</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input class="form-control" id="ad_account" type="text"
+                                                               placeholder=""
+                                                               disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">班级</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input class="form-control" id="ad_user_class" type="text"
+                                                               placeholder=""
+                                                               disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">卡类型</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input class="form-control" id="ad_card_type" type="text"
+                                                               placeholder=""
+                                                               disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">卡状态</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input class="form-control" id="ad_profession" type="text"
+                                                               placeholder=""
+                                                               disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">余额</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input class="form-control" id="ad_card_balance" type="text"
+                                                               placeholder=""
+                                                               disabled>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">门禁</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input class="form-control" id="ad_out_role" type="text"
+                                                               placeholder=""
+                                                               disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" id="stus">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 修改学生信息的动态div -->
+        <div class="modal fade" id="update_stu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabelss">
+                            学生详情
+                        </h4>
+                        <div class="wrapper">
+                            <div class="row">
+                                <div id="headerRightsss">
+                                    <div contenteditable="" id="stu_detail_up">
+                                        <div class="tab-content form-horizontal" id="home-pillss">
+                                            <div class="form-group">
+                                                <label class="col-sm-2 col-sm-2 control-label">姓名</label>
+                                                <div class="col-md-6 col-sm-6">
+                                                    <input class="form-control" id="ads_user_name" type="text"
+                                                           placeholder=""
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">卡号</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input class="form-control" id="ads_card_id" type="text"
+                                                               placeholder=""
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">班级</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input class="form-control" id="ads_user_class" type="text"
+                                                               placeholder=""
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">卡状态</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <select style="width: 200px;" class="form-control" id="card_status">
+                                                            <option>正常</option>
+                                                            <option>停用</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">门禁</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <select style="width: 200px;" class="form-control" id="out_roles">
+                                                            <option>正常</option>
+                                                            <option>禁止</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" id="up_stu">
+                        <button id="upstu" type="button" class="btn btn-default" data-dismiss="modal">提交
                         </button>
                     </div>
                 </div>

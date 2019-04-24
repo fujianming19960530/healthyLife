@@ -119,15 +119,17 @@ public class HomeService implements HomeServiceInterface{
         Map<String,Object> responseMap = new HashMap<>();
         CacheManagerImpl cacheManagerImpl = new CacheManagerImpl();
         Object userInfo = cacheManagerImpl.getCacheDataByKey("userInfo");
-        map.put("card_id",((HashMap) userInfo).get("card_id").toString());
-        map.put("account",((HashMap) userInfo).get("account").toString());
+        if(((HashMap) userInfo).get("role_level").toString().equals("00")){
+            map.put("card_id",((HashMap) userInfo).get("card_id").toString());
+            map.put("account",((HashMap) userInfo).get("account").toString());
+            responseMap.put("userInfo",userMapper.queryOneUserInfoByCondition(map));
+        }
         responseMap.put("totalFinance",userMapper.queryFinance(map));
         //01充值，00消费
         map.put("type","01");
         responseMap.put("queryFinanceIn",userMapper.queryNumber(map).get("transaction_number"));
         map.put("type","00");
         responseMap.put("queryFinanceOut",userMapper.queryNumber(map).get("transaction_number"));
-        responseMap.put("userInfo",userMapper.queryOneUserInfoByCondition(map));
         result.setResult(responseMap);
         return result;
     }
@@ -154,6 +156,34 @@ public class HomeService implements HomeServiceInterface{
     @Override
     public Integer delNotices(Map<String, String> map) {
         userMapper.delNotices(map);
+        return 0;
+    }
+
+    @Override
+    public ResponseResult queryUserInfo(Map<String, String> map) {
+        ResponseResult result = new ResponseResult(Const.CODE_INFO.CODE_0000);
+        result.setResult(userMapper.queryListUserInfoByCondition(map));
+        return result;
+    }
+
+    @Override
+    public Integer insertNotice(Map<String, String> map) {
+        CacheManagerImpl cacheManagerImpl = new CacheManagerImpl();
+        Object userInfo = cacheManagerImpl.getCacheDataByKey("userInfo");
+        map.put("admin_name",((HashMap) userInfo).get("sys_name").toString());
+        userMapper.insertNotice(map);
+        return 0;
+    }
+
+    @Override
+    public Integer updateUser(Map<String, String> map) {
+        userMapper.updateUser(map);
+        return 0;
+    }
+
+    @Override
+    public Integer delUser(Map<String, String> map) {
+        userMapper.delUser(map);
         return 0;
     }
 }

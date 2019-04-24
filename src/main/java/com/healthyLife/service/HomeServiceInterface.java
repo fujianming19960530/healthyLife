@@ -75,4 +75,32 @@ public interface HomeServiceInterface {
      * @return
      */
     Integer delNotices(Map<String,String> map);
+
+    /**
+     * 查询全部的用户信息
+     * @param map
+     * @return
+     */
+    ResponseResult queryUserInfo(Map<String,String> map);
+
+    /**
+     * 新增通知
+     * @param map
+     * @return
+     */
+    Integer insertNotice(Map<String,String> map);
+
+    /**
+     * 修改用户信息
+     * @param map
+     * @return
+     */
+    Integer updateUser(Map<String,String> map);
+
+    /**
+     * 删除用户
+     * @param map
+     * @return
+     */
+    Integer delUser(Map<String,String> map);
 }
