@@ -25,6 +25,9 @@
       <if test="account != null">
         and account = #{account}
       </if>
+      <if test="password != null">
+        and password = #{password}
+      </if>
     </where>
   </select>
 
@@ -134,6 +137,11 @@
 
   <select id="delUser" parameterType="map" resultType="int">
     DELETE from mem_user
+      where account = #{account}
+  </select>
+
+  <select id="updateAdminpwd" parameterType="map" resultType="int">
+    update sys_user set password = #{new_password}
       where account = #{account}
   </select>
 

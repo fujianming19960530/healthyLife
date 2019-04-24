@@ -103,4 +103,11 @@ public interface HomeServiceInterface {
      * @return
      */
     Integer delUser(Map<String,String> map);
+
+    /**
+     * 更新admin密码
+     * @param map
+     * @return
+     */
+    ResponseResult updateAdminPwd(Map<String,String> map);
 }

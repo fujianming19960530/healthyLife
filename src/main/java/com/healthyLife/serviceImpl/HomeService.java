@@ -186,4 +186,19 @@ public class HomeService implements HomeServiceInterface{
         userMapper.delUser(map);
         return 0;
     }
+
+    @Override
+    public ResponseResult updateAdminPwd(Map<String, String> map) {
+        ResponseResult result = new ResponseResult(Const.CODE_INFO.CODE_0000);
+        CacheManagerImpl cacheManagerImpl = new CacheManagerImpl();
+        Object userInfo = cacheManagerImpl.getCacheDataByKey("userInfo");
+        map.put("account",((HashMap) userInfo).get("account").toString());
+        Map<String,Object> adminInfo = userMapper.queryOneAdminInfoByCondition(map);
+        if(adminInfo == null){
+            result.setRes_code(Const.CODE_INFO.CODE_0004.getCode());
+            return result;
+        }
+        userMapper.updateAdminpwd(map);
+        return result;
+    }
 }

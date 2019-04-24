@@ -347,6 +347,13 @@
                             <header class="panel-heading">
                                 交易记录查询
                             </header>
+                            <button style="margin-left: 30px" id="all_cx" class="btn btn-primary" data-toggle="modal" data-target="#" type="button">全部记录</button>
+                            <button style="margin-left: 30px" id="xf_cx" class="btn btn-primary" data-toggle="modal" data-target="#" type="button">消费查询</button>
+                            <button style="margin-left: 30px" id="cz_cx" class="btn btn-primary" data-toggle="modal" data-target="#" type="button">充值查询</button>
+                            <button style="margin-left: 30px" id="kh" class="btn btn-primary" data-toggle="modal" data-target="#add_card" type="button">开户</button>
+                            <button style="margin-left: 30px" id="xh" class="btn btn-primary" data-toggle="modal" data-target="#del_card" type="button">销户</button>
+                            <button style="margin-left: 30px" id="gs" class="btn btn-primary" data-toggle="modal" data-target="#lose_card" type="button">挂失/补办</button>
+
                             <div class="panel-body">
                                 <div class="adv-table">
                                     <table class="display table table-bordered table-striped" id="dynamic-tabless">
@@ -612,6 +619,182 @@
                     </div>
                     <div class="modal-footer" id="up_stu">
                         <button id="upstu" type="button" class="btn btn-default" data-dismiss="modal">提交
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 开户动态div -->
+        <div class="modal fade" id="add_card" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabelsss">
+                            开户
+                        </h4>
+                        <div class="wrapper">
+                            <div class="row">
+                                <div id="headerRightssss">
+                                    <div contenteditable="" id="addcard">
+                                        <div class="tab-content form-horizontal" id="home-pillsss">
+                                            <div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">卡号/学号</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input class="form-control" id="stu_account" type="text"
+                                                               placeholder=""
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" id="kh_accounts">
+                        <button id="kh_stu" type="button" class="btn btn-default" data-dismiss="modal">提交
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 销户动态div -->
+        <div class="modal fade" id="del_card" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabelssss">
+                            销户
+                        </h4>
+                        <div class="wrapper">
+                            <div class="row">
+                                <div id="headerRightsssss">
+                                    <div contenteditable="" id="delcard">
+                                        <div class="tab-content form-horizontal" id="home-pillssss">
+                                            <div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">卡号/学号</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input class="form-control" id="del_account" type="text"
+                                                               placeholder=""
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" id="xh_accounts">
+                        <button id="xh_stu" type="button" class="btn btn-default" data-dismiss="modal">提交
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 挂失动态div -->
+        <div class="modal fade" id="lose_card" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabelsssss">
+                            客户挂失
+                        </h4>
+                        <div class="wrapper">
+                            <div class="row">
+                                <div id="headerRightssssss">
+                                    <div contenteditable="" id="lose_cards">
+                                        <div class="tab-content form-horizontal" id="home-pillsssss">
+                                            <div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">卡号/学号</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input class="form-control" id="get_lose_card" type="text"
+                                                               placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">新卡</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input class="form-control" id="new_card" type="text"
+                                                               placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" id="gs_accounts">
+                        <button id="gs_stu" type="button" class="btn btn-default" data-dismiss="modal">提交
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--管理员修改自己的密码-->
+        <div class="modal fade" id="up_pwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabelssssss">
+                            修改密码
+                        </h4>
+                        <div class="wrapper">
+                            <div class="row">
+                                <div id="headerRightsssssss">
+                                    <div contenteditable="" id="upt_pwd">
+                                        <div class="tab-content form-horizontal" id="home-pillssssss">
+                                            <div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">旧密码</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input class="form-control" id="old_pwd" type="text"
+                                                               placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-sm-2 control-label">新密码</label>
+                                                    <div class="col-md-6 col-sm-6">
+                                                        <input class="form-control" id="new_pwd" type="text"
+                                                               placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" id="gs_accsounts">
+                        <button id="uppwd" type="button" class="btn btn-default" data-dismiss="modal">提交
                         </button>
                     </div>
                 </div>

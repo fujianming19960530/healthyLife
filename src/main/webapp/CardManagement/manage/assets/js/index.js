@@ -12,6 +12,8 @@ var indexnowPage = 1;
 var cwnowPage = 1;
 var stunowPage = 1;
 var role = "user";
+var cwxfData = [];
+var cwczData = [];
 var index = {
     init: function () {
         var me = this;
@@ -49,9 +51,24 @@ var index = {
         var param = {};
         param.index = "";
         Invoker.invokeRequest("adminController/adminInfo", param, function login(data) {
+            var html = "<button style=\"margin-left: 30px\" id=\"all_cx\" class=\"btn btn-primary\" " +
+                "data-toggle=\"modal\" data-target=\"#up_pwd\" type=\"button\">修改密码</button>";
+            $("#home-pills").append(html);
             var result = data.result;
             $("#user_name").val(result.sys_name);
             $("#admin_account").val(result.account);
+            $("#uppwd").bind("click",function () {
+                var params = {};
+                params.password = $("#old_pwd").val();
+                params.new_password = $("#new_pwd").val();
+                Invoker.invokeRequest("adminController/updateAdminPwd", params, function login(data) {
+                    if(data.res_code == '0004'){
+                        alert("原密码错误！");
+                    }else {
+                        alert("密码跟新成功!");
+                    }
+                });
+            });
             me.adminClick();
         })
     },
@@ -362,7 +379,7 @@ var index = {
             $("#dynamic-table_length").hide();
             $("#dynamic-table_filter").hide();
         });
-        $("#nt_sub_add").bind("click",function () {
+        $("#nt_sub_add").bind("click", function () {
             var param = {};
             param.notice_title = $("#nt_tit").val();
             param.notice_content = $("#nt_det").val();
@@ -470,8 +487,8 @@ var index = {
             $("#tbody_notice").append(error_tr);
         }
     },
-    stuShows:function () {
-        var me= this;
+    stuShows: function () {
+        var me = this;
         var param = {};
         param.index = "";
         Invoker.invokeRequest("adminController/queryuserInfo", param, function ss(data) {
@@ -480,7 +497,6 @@ var index = {
             me.stu_pageClick();
             me.stu_modifyPage(1);
             me.stu_pageJump(1, 10, studataTemp);
-            console.log(data);
         });
     },
     //学生信息分页点击事件
@@ -584,18 +600,91 @@ var index = {
         }
     },
 
-    cwShows:function () {
-        var me= this;
+    cwShows: function () {
+        var me = this;
         var param = {};
         param.index = "";
         Invoker.invokeRequest("adminController/queryFinance", param, function ss(data) {
             var result = data.result.totalFinance;
+            for (var i = 0; i < result.length; i++) {
+                if (result[i].transaction_type == "01") {
+                    cwczData.push(result[i]);
+                } else {
+                    cwxfData.push(result[i]);
+                }
+            }
             mondataTemp = result;
-            console.log(result);
-            me.cw_pageClick();
-            me.cw_modifyPage(1);
             me.cw_pageJump(1, 10, mondataTemp);
+            me.cw_pageClick();
+            me.cw_modifyPage(1, mondataTemp);
         });
+        me.cwClick();
+    },
+    cwClick: function () {
+        var me = this;
+        $("#xf_cx").bind("click", function () {
+            me.cw_pageJump(1, 10, cwxfData);
+            me.cw_pageClick();
+            me.cw_modifyPage(1, cwxfData);
+        });
+        $("#cz_cx").bind("click", function () {
+            me.cw_pageJump(1, 10, cwczData);
+            me.cw_pageClick();
+            me.cw_modifyPage(1, cwczData);
+        });
+        $("#all_cx").bind("click", function () {
+            me.cw_pageJump(1, 10, mondataTemp);
+            me.cw_pageClick();
+            me.cw_modifyPage(1, mondataTemp);
+        });
+        $("#kh_stu").bind("click", function () {
+            var params = {};
+            params.user_name = "";
+            params.account = $("#stu_account").val();
+            params.password = "123456";
+            params.telphone = "";
+            params.card_id = $("#stu_account").val();
+            params.address = "";
+            params.user_class = "";
+            params.profession = "";
+            params.birthday = "";
+            Invoker.invokeRequest("loginController/userReistertion", params, function login(data) {
+                if (data.result.res_code == "0004") {
+                    alert("开户失败，账号已被占用");
+                    return false;
+                } else {
+                    alert("开户成功");
+                }
+            });
+        });
+        $("#xh_stu").bind("click", function () {
+            var par = {};
+            par.account = $("#del_account").val();
+            Invoker.invokeRequest("adminController/delUser", par, null);
+            alert("销户成功");
+        });
+        $("#gs_stu").bind("click", function () {
+            var param = {};
+            param.account = $("#get_lose_card").val();
+            //先查询是否存在用户
+            Invoker.invokeRequest("adminController/queryuserInfo", param, function ss(data) {
+                var result = data.result;
+                if(result.length == 0){
+                    alert("挂失失败，用户不存在！")
+                }else {
+                    var par = {};
+                    debugger;
+                    par.user_name = result[0].user_name;
+                    par.card_id = $("#new_card").val();
+                    par.user_class = result[0].user_class;
+                    par.out_role = result[0].out_role;
+                    par.profession = result[0].profession;
+                    par.account = result[0].account;
+                    Invoker.invokeRequest("adminController/updateUser", par, null);
+                    alert("挂失成功！")
+                }
+            });
+        })
     },
     //财务信息分页点击事件
     cw_pageClick: function () {
@@ -633,16 +722,16 @@ var index = {
         });
     },
     //财务信息分页控件信息
-    cw_modifyPage: function (nowPage) {
+    cw_modifyPage: function (nowPage, data) {
         $("#cw_Two").show();
         $("#cw_Three").show();
         $("#cw_One").show();
-        if (Math.ceil(mondataTemp.length / indexrows) < 3) {
-            if (Math.ceil(mondataTemp.length / indexrows) == 1) {
+        if (Math.ceil(data.length / indexrows) < 3) {
+            if (Math.ceil(data.length / indexrows) == 1) {
                 $("#cw_Two").hide();
                 $("#cw_Three").hide();
             }
-            if (Math.ceil(mondataTemp.length / indexrows) == 2) {
+            if (Math.ceil(data.length / indexrows) == 2) {
                 $("#cw_Three").hide();
             }
         } else {
@@ -729,24 +818,23 @@ function updateNotice(data) {
         $("#nt_detail").val(result.notice_content);
         var bt = "<button id='sub_nt' type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">提交\n" +
             "                        </button>";
-        var close ="<button id='close' type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">关闭\n" +
+        var close = "<button id='close' type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">关闭\n" +
             "                        </button>";
         $("#nt").empty();
         $("#nt").append(bt);
         $("#nt").append(close);
-        $("#close").bind("click",function () {
+        $("#close").bind("click", function () {
             $("#nt").empty();
             $("#nt").append(close);
             $("#close").click();
         });
-        $("#sub_nt").bind("click",function () {
+        $("#sub_nt").bind("click", function () {
             var title = $("#nt_title").val();
             var detail = $("#nt_detail").val();
             var params = {};
             params.title = title;
             params.notice_id = data.result[0].notice_id;
             params.detail = detail;
-            debugger;
             setNt(params);
         });
     });
@@ -764,7 +852,7 @@ function delNt(data) {
     param.notice_id = notice_id;
     debugger;
     Invoker.invokeRequest("adminController/delNotices", param, function xx(ss) {
-        window.location.href="../manage/index.html";
+        window.location.href = "../manage/index.html";
     });
 }
 
@@ -803,13 +891,13 @@ function updateStu(data) {
         $("#ads_card_id").val(result.card_id);
         $("#ads_user_class").val(result.user_class);
     });
-    $("#upstu").bind("click",function () {
+    $("#upstu").bind("click", function () {
         var par = {};
         par.user_name = $("#ads_user_name").val();
-        par.card_id= $("#ads_card_id").val();
-        par.user_class= $("#ads_user_class").val();
-        par.out_role= $("#card_status").val();
-        par.profession= $("#out_roles").val();
+        par.card_id = $("#ads_card_id").val();
+        par.user_class = $("#ads_user_class").val();
+        par.out_role = $("#card_status").val();
+        par.profession = $("#out_roles").val();
         par.account = data;
         Invoker.invokeRequest("adminController/updateUser", par, null);
         alert("修改成功！")
@@ -821,8 +909,9 @@ function delStu(data) {
     var par = {};
     par.account = data;
     Invoker.invokeRequest("adminController/delUser", par, null);
-    window.location.href="../manage/index.html";
+    window.location.href = "../manage/index.html";
 }
+
 $(function () {
         index.init();
     }

@@ -97,5 +97,13 @@ public class adminController {
         return result;
     }
 
+    @RequestMapping(value="/updateAdminPwd")
+    @ResponseBody
+    public ResponseResult updateAdminPwd(@RequestBody Map<String,String> request){
+        ResponseResult result = new ResponseResult(Const.CODE_INFO.CODE_0000);
+        result = homeService.updateAdminPwd(request);
+        return result;
+    }
+
 
 }

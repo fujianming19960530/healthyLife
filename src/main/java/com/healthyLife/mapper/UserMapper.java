@@ -6,6 +6,7 @@ package com.healthyLife.mapper;
  *
  */
 
+import javax.persistence.criteria.CriteriaBuilder;
 import java.util.List;
 import java.util.Map;
 
@@ -114,4 +115,11 @@ public interface UserMapper {
      * @return
      */
     Integer delUser(Map<String,String> map);
+
+    /**
+     * 跟新admin密码
+     * @param map
+     * @return
+     */
+    Integer updateAdminpwd(Map<String,String> map);
 }
