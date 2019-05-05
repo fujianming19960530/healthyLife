@@ -19,6 +19,7 @@ var reg = {
         var telphone = $("#phone").val();
         var card_id = $("#card_id").val();
         var address = $("#address").val();
+        var user_class = $("#user_class").val();
 
         var regAccount = /^\d{10}$/;
         var regPassword = /^(?![^a-zA-Z]+$)(?!\\D+$).{8,16}$/;
@@ -54,9 +55,12 @@ var reg = {
         params.telphone = telphone;
         params.card_id = card_id;
         params.address = address;
-        params.user_class = "";
-        params.profession = "";
+        params.user_class = user_class;
+        params.profession = "正常";
         params.birthday = "";
+        params.card_type = "学生卡";
+        params.card_balance = "100";
+        params.out_role = "正常";
         Invoker.invokeRequest("loginController/userReistertion",params,function login(data){
             if(data.result.res_code == "0004"){
                 alert("注册失败，账号已被占用");

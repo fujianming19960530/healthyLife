@@ -24,6 +24,9 @@
                 <img src="assets/img/logo.png" />
             </a>
         </div>
+        <div class="right-div" id="logs">
+
+        </div>
         <div class="right-div">
             <a id="manage" href="#" class="btn btn-danger pull-right">学生信息</a>
         </div>
@@ -37,10 +40,9 @@
                     <ul id="myTab" class="nav nav-tabs">
                         <li class="active"><a href="#indexPage" data-toggle="tab">系统首页</a>
                         </li>
-                        <li><a href="#pickupPage" data-toggle="tab">拾卡信息</a></li>
-                        <li><a href="#losePage" data-toggle="tab">失卡信息 </a>
+                        <li><a id="pic_" href="#pickupPage" data-toggle="tab">拾卡信息</a></li>
+                        <li><a id="lose_" href="#losePage" data-toggle="tab">失卡信息 </a>
                         </li>
-                        <!--<li><a href="#about" data-toggle="tab">关于我们</a></li>-->
                     </ul>
                 </div>
             </div>
@@ -72,12 +74,29 @@
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            高校一卡通管理系统
+                            系统组成
                         </div>
                         <div class="panel-body">
                             <div class="panel-group" id="accordion">
                                 <div class="panel panel-default">
                                     <div id="collapseTwo" class="panel-collapse in" style="height: auto;">
+                                        <div class="panel-body">
+                                            高校一卡通管理系统组成
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            使用指南
+                        </div>
+                        <div class="panel-body">
+                            <div class="panel-group" id="accordions">
+                                <div class="panel panel-default">
+                                    <div id="collapseTwos" class="panel-collapse in" style="height: auto;">
                                         <div class="panel-body">
                                             高校一卡通管理系统介绍
                                         </div>
@@ -111,7 +130,7 @@
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            拾卡信息概览
+                            拾卡信息概览<a data-toggle='modal' data-target='#card_info' data-dismiss="modal" style="margin-left: 20px" id="add_pick" href="#" class="btn btn-info btn-sm">新增拾卡信息</a>
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -139,9 +158,7 @@
                                 <ul id="pickUppageUl" class="pagination">
                                     <li><a id="pickUpUppage" href="javascript:void(0)">&laquo;</a></li>
                                     <li><a id="pickUpFist" href="javascript:void(0)">首页</a></li>
-                                    <li><a id="pickUpOne" href="javascript:void(0)">1</a></li>
-                                    <li><a id="pickUpTwo" href="javascript:void(0)">2</a></li>
-                                    <li><a id="pickUpThree" href="javascript:void(0)">3</a></li>
+                                    <li><a id="pickUpTwo" href="javascript:void(0)">1</a></li>
                                     <li><a id="pickUpLast" href="javascript:void(0)">尾页</a></li>
                                     <li><a id="pickUpNextpage" href="javascript:void(0)">&raquo;</a></li>
                                     <li><a id="pickUpJumpPage" href="javascript:void(0)">跳页</a></li>
@@ -169,7 +186,7 @@
                     <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                失卡信息概览
+                                失卡信息概览<a data-toggle='modal' data-target='#card_info' data-dismiss="modal" style="margin-left: 20px" id="add_lose" href="#" class="btn btn-info btn-sm">新增失卡信息</a>
                             </div>
                             <div class="panel-body">
                                 <div class="table-responsive">
@@ -195,9 +212,7 @@
                                     <ul id="losepageUl" class="pagination">
                                         <li><a id="loseUppage" href="javascript:void(0)">&laquo;</a></li>
                                         <li><a id="loseFist" href="javascript:void(0)">首页</a></li>
-                                        <li><a id="loseOne" href="javascript:void(0)">1</a></li>
-                                        <li><a id="loseTwo" href="javascript:void(0)">2</a></li>
-                                        <li><a id="loseThree" href="javascript:void(0)">3</a></li>
+                                        <li><a id="loseTwo" href="javascript:void(0)">1</a></li>
                                         <li><a id="loseLast" href="javascript:void(0)">尾页</a></li>
                                         <li><a id="loseNextpage" href="javascript:void(0)">&raquo;</a></li>
                                         <li><a id="loseJumpPage" href="javascript:void(0)">跳页</a></li>
@@ -211,11 +226,66 @@
         <script src="assets/js/loseCard.js"></script>
     </div>
     <!--end3-->
+    <div class="modal fade" id="comm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="head_up">
+                        <p>通知详情</p>
+                    </h4>
+                    <div class="wrapper">
+                        <div class="row">
+                            <div id="headerRigh">
+                                <div contenteditable="" id="push_detail">
+                                    <div class="tab-content form-horizontal" id="home-pill">
 
-    <!-- about -->
-    <div id="about" class="tab-pane fade" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" id="up_userInfo">
+                    <!--<button id="sub_act_push" type="button" class="btn btn-default" data-dismiss="modal">提交
+                    </button>-->
+                </div>
+            </div>
+        </div>
+    </div>
 
-        hah
+    <div class="modal fade" id="card_info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="card_infos">
+
+                    </h4>
+                    <div class="wrapper">
+                        <div class="row">
+                            <div id="headerRighs">
+                                <div contenteditable="" id="push_details">
+                                    <div class="tab-content form-horizontal" id="home-pills">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" id="up_userInfos">
+                    <button id="sub_act_push" type="button" class="btn btn-default" data-dismiss="modal">提交
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </div><section class="footer-section">
     <div class="container">

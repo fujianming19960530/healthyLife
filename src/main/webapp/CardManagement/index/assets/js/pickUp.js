@@ -18,9 +18,10 @@ var pickUp = {
     },
     //分页点击事件
     pageClick:function () {
+        debugger;
         var me= this;
         $("#pickUpFist").bind("click", function () {
-            var code = parseInt($("#pickUpOne").html());
+            var code = 1;
             me.modifyPage(code);
             me.pickUppageJump(code,pickUprows,pickUpdataTemp);
         });
@@ -38,7 +39,6 @@ var pickUp = {
         });
         $("#pickUpNextpage").bind("click",function () {
             var code = pickUpnowPage;
-            debugger;
             if(code < Math.ceil(pickUpdataTemp.length/pickUprows) && code > 0){
                 me.modifyPage(code+1);
                 me.pickUppageJump(code+1,pickUprows,pickUpdataTemp)
@@ -63,23 +63,9 @@ var pickUp = {
         });
     },
     modifyPage:function (nowPage) {
-        $("#pickUpOne").show();
-        $("#pickUpTwo").show();
-        $("#pickUpThree").show();
-        if(Math.ceil(pickUpdataTemp.length/pickUprows) < 3){
-            if(Math.ceil(pickUpdataTemp.length/pickUprows) == 1){
-                $("#pickUpTwo").hide();
-                $("#pickUpThree").hide();
-            }
-            if(Math.ceil(pickUpdataTemp.length/pickUprows) == 2){
-                $("#pickUpThree").hide();
-            }
-        }else {
+        debugger;
             $("#pickUpTwo").html(nowPage);
-            $("#pickUpOne").html(nowPage-1);
-            $("#pickUpThree").html(nowPage+1);
-        }
-    },
+        },
     /**
      *
      * @param nowPage 当前页

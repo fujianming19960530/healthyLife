@@ -21,9 +21,9 @@ var lose = {
     losepageClick:function () {
         var me= this;
         $("#loseFist").bind("click", function () {
-            var code = parseInt($("#loseOne").html());
-            me.losemodifyPage(code);
-            me.losepageJump(code,loserows,losedataTemp);
+            //var code = parseInt($("#loseOne").html());
+            me.losemodifyPage(1);
+            me.losepageJump(1,loserows,losedataTemp);
         });
         $("#loseLast").bind("click", function () {
             var code = parseInt(Math.ceil(losedataTemp.length/loserows));
@@ -63,22 +63,7 @@ var lose = {
         });
     },
     losemodifyPage:function (nowPage) {
-        $("#loseTwo").show();
-        $("#loseThree").show();
-        $("#loseOne").show();
-        if(Math.ceil(losedataTemp.length/loserows) < 3){
-            if(Math.ceil(losedataTemp.length/loserows) == 1){
-                $("#loseTwo").hide();
-                $("#loseThree").hide();
-            }
-            if(Math.ceil(losedataTemp.length/loserows) == 2){
-                $("#loseThree").hide();
-            }
-        }else {
-            $("#loseTwo").html(nowPage);
-            $("#loseOne").html(nowPage-1);
-            $("#loseThree").html(nowPage+1);
-        }
+        $("#loseTwo").html(nowPage);
     },
     /**
      *
@@ -87,6 +72,7 @@ var lose = {
      * @param data 要显示的数据（数组或map）
      */
     losepageJump:function (nowPage,rows,data){
+        console.log(data);
         losenowPage = nowPage;
         $("#lose_tbody").empty();
         if(data.length != 0){

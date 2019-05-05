@@ -25,4 +25,12 @@ public class loseCardController {
         result.setResult(homeServiceInterface.queryLoseCardUserInfoByCondition(request));
         return result;
     }
+
+    @RequestMapping("/insertLoseCard")
+    @ResponseBody
+    public ResponseResult insertLoseCard(@RequestBody Map<String,String> request){
+        ResponseResult result = new ResponseResult(Const.CODE_INFO.CODE_0000);
+        homeServiceInterface.insertLoseCard(request);
+        return result;
+    }
 }

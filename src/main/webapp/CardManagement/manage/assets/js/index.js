@@ -136,17 +136,27 @@ var index = {
         param.index = "index";
         Invoker.invokeRequest("adminController/queryFinance", param, function login(data) {
             var result = data.result;
-            var userInfo = result.userInfo;
-            queryFinance = result.totalFinance;
-            fin01 = [];
-            fin00 = [];
-            for (var i = 0; i < queryFinance.length; i++) {
-                if (queryFinance[i].transaction_type == "00") {
-                    fin00.push(queryFinance[i]);
-                } else if (queryFinance[i].transaction_type == "01") {
-                    fin01.push(queryFinance[i]);
+            if(result != null){
+                var userInfo = result.userInfo;
+                queryFinance = result.totalFinance;
+                fin01 = [];
+                fin00 = [];
+                for (var i = 0; i < queryFinance.length; i++) {
+                    if (queryFinance[i].transaction_type == "00") {
+                        fin00.push(queryFinance[i]);
+                    } else if (queryFinance[i].transaction_type == "01") {
+                        fin01.push(queryFinance[i]);
+                    }
                 }
+                $("#queryFinanceIn").html("￥" + result.queryFinanceIn);
+                $("#queryFinanceOut").html("￥" + result.queryFinanceOut);
             }
+            if(!!!(result.queryFinanceIn)){
+                $("#queryFinanceIn").html("￥0");
+            }if(!!!(result.queryFinanceOut)){
+                $("#queryFinanceOut").html("￥0");
+            }
+
             //00是普通用户，01是管理员
             if (userInfo.role_level == "00") {
                 $("#user_name").val(userInfo.user_name);
@@ -157,8 +167,6 @@ var index = {
                 $("#profession").val(userInfo.profession);
                 $("#card_balance").val(userInfo.card_balance);
                 $("#out_role").val(userInfo.out_role);
-                $("#queryFinanceIn").html("￥" + result.queryFinanceIn);
-                $("#queryFinanceOut").html("￥" + result.queryFinanceOut);
                 me.usertransactionInfo(queryFinance, "no");
                 $("#more").bind("click", function () {
                     if (xftype == "all") {

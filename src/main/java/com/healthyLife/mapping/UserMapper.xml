@@ -71,9 +71,9 @@
 
   <select id="InsertUserInfo" parameterType="map">
     insert into mem_user(account,password,birthday,role_level,user_name,
-    telphone,address,card_id,profession,user_class)
+    telphone,address,card_id,profession,user_class,card_type,card_balance,out_role)
     VALUE (#{account},#{password},#{birthday},#{role_level},#{user_name},
-    #{telphone},#{address},#{card_id},#{profession},#{user_class})
+    #{telphone},#{address},#{card_id},#{profession},#{user_class},#{card_type},#{card_balance},#{out_role})
   </select>
 
   <select id="queryNumber" parameterType="map" resultType="map">
@@ -143,6 +143,24 @@
   <select id="updateAdminpwd" parameterType="map" resultType="int">
     update sys_user set password = #{new_password}
       where account = #{account}
+  </select>
+
+  <select id="querylogtime" parameterType="map" resultType="map">
+    select * from log_time
+  </select>
+
+  <select id="updatelogtime" parameterType="map" resultType="int">
+    UPDATE log_time set logtime = #{logtime}
+  </select>
+
+  <select id="insertPickCard" parameterType="map" resultType="int">
+    insert into card_pickup(card_id,card_pickup_account,card_pickupdate,card_pickup_name,card_pickup_phone,card_pickup_addr)
+      VALUES(#{card_id},#{account},date_format(SYSDATE(),'%Y-%m-%d %T'),#{username},#{phone},#{address})
+  </select>
+
+  <select id="insertLoseCard" parameterType="map" resultType="int">
+    insert into card_lose (card_id,card_losedate)
+    VALUES(#{card_id},date_format(SYSDATE(),'%Y-%m-%d %T'))
   </select>
 
 </mapper>

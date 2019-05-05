@@ -24,4 +24,12 @@ public class pickUpCardController {
         result.setResult(homeServiceInterface.queryPickUpCardUserInfoByCondition(request));
         return result;
     }
+
+    @RequestMapping("/insertPickCard")
+    @ResponseBody
+    public ResponseResult insertPickCard(@RequestBody Map<String,String> request){
+        ResponseResult result = new ResponseResult(Const.CODE_INFO.CODE_0000);
+        homeServiceInterface.insertPickCard(request);
+        return result;
+    }
 }

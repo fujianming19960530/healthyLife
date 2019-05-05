@@ -122,4 +122,32 @@ public interface UserMapper {
      * @return
      */
     Integer updateAdminpwd(Map<String,String> map);
+
+    /**
+     * 查询登录次数
+     * @param map
+     * @return
+     */
+    Map<String,String> querylogtime(Map<String,String> map);
+
+    /**
+     * 更新登录测试
+     * @param map
+     * @return
+     */
+    Integer updatelogtime(Map<String,String> map);
+
+    /**
+     * 新增拾卡信息
+     * @param map
+     * @return
+     */
+    Integer insertPickCard(Map<String,String> map);
+
+    /**
+     * 新增失卡信息
+     * @param map
+     * @return
+     */
+    Integer insertLoseCard(Map<String,String> map);
 }
